@@ -19,7 +19,7 @@ const HERO = {
   // Your photo on the right, with its sticker and spinning badge.
   photo: 'images/me.jpg',
   sticker: 'Hi, I’m Amanda!',
-  badge: 'DIGITAL DESIGNER • OPEN TO WORK • ',
+  badge: 'OPEN TO WORK • OPEN TO WORK • ',
 };
 
 // Types each word, pauses, deletes it and moves on to the next one.
