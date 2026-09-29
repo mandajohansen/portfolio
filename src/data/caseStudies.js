@@ -1,6 +1,6 @@
 // Content for the case study pages. The key is the URL: #<key>.
 //
-// image: put a file in /public/images and reference it as '/images/<file>'.
+// image: put a file in /public/images and reference it as 'images/<file>'.
 //        Leave it null to show a soft placeholder instead.
 //
 // Each section has an id (used by the side menu), a `nav` label for the side
@@ -32,7 +32,7 @@ export const caseStudies = {
       'I designed and developed a **mobile-first internal communication platform for retail employees**, exploring how communication could become more structured, accessible, and relevant to employees with different responsibilities.',
       'The project went from initial user research and design exploration to a functional mobile application tested in a real retail environment.',
     ],
-    heroImage: '/images/thesishero-crop.png',
+    heroImage: 'images/thesishero-crop.png',
 
     facts: [
       { icon: 'user', title: 'Role', text: 'UX Researcher, UX/UI Designer, Mobile Developer, Project Owner' },
@@ -82,7 +82,7 @@ export const caseStudies = {
         nav: 'Why',
         label: 'Why?',
         title: 'What problem was I solving?',
-        image: '/images/combinedtoone.png',
+        image: 'images/combinedtoone.png',
         caption: '',
         blocks: [
           {
@@ -211,18 +211,18 @@ export const caseStudies = {
               {
                 title: 'A - Navigation-first',
                 text: 'A tile-based dashboard focused on quickly getting users to a specific destination.',
-                image: '/images/designa.png',
+                image: 'images/designa.png',
               },
               {
                 title: 'B - Hybrid',
                 text: 'A combination of recent information and structured navigation.',
-                image: '/images/designb.png',
+                image: 'images/designb.png',
                 chosen: true,
               },
               {
                 title: 'C - Content-first',
                 text: 'A social-feed-inspired experience emphasizing the latest updates across differnet pages.',
-                image: '/images/designc.png',
+                image: 'images/designc.png',
               },
             ],
           },
@@ -237,17 +237,17 @@ export const caseStudies = {
               {
                 title: 'A - Minimalist',
                 text: 'A simple, clean interface with minimal distractions, focusing on the essential information needed for handovers. Where the user can write what ever they find important to report',
-                image: '/images/Form iphone 1.png',
+                image: 'images/Form iphone 1.png',
               },
               {
                 title: 'B - Hybrid',
                 text: 'This design combines elements of both the minimalist and codified approaches, providing a balance between simplicity and structure. It includes predefined fields for key information while still allowing users to add custom notes.',
-                image: '/images/Form iphone 2.png',
+                image: 'images/Form iphone 2.png',
               },
               {
                 title: 'C - Codified',
                 text: 'A structured form with predefined fields and categories, guiding users to provide specific information in a consistent format. This approach aims to standardize handovers and ensure that critical details are not overlooked.',
-                image: '/images/Form iphone 3.png',
+                image: 'images/Form iphone 3.png',
                 chosen: true,
               },
             ],
@@ -281,7 +281,7 @@ export const caseStudies = {
               {
                 title: 'Role-based content',
                 text: 'A manager, key holder and part-time employee did not necessarily receive the same information.',
-                image: '/images/Android frontpage.png',
+                image: 'images/Android frontpage.png',
               },
               {
                 title: 'Tags and filters',
@@ -291,22 +291,22 @@ export const caseStudies = {
               {
                 title: 'Must Read confirmations',
                 text: 'Important communication could require an active acknowledgement rather than relying on passive message delivery.',
-                image: '/images/Android not confirmed.png',
+                image: 'images/Android not confirmed.png',
               },
               {
                 title: 'Structured handovers',
                 text: 'Instead of relying entirely on verbal memory, handover information could be categorized and preserved.',
-                image: '/images/Android handovers ex.png',
+                image: 'images/Android handovers ex.png',
               },
               {
                 title: 'Knowledge Bank',
                 text: 'Procedures and persistent information were separated from time-sensitive communication.',
-                image: '/images/Android Knowledge.png',
+                image: 'images/Android Knowledge.png',
               },
               {
                 title: 'Peer-to-peer knowledge',
                 text: 'For employees to employees to share knowledge and tips, rather than relying on top-down communication.',
-                image: '/images/Android peerknowledge.png',
+                image: 'images/Android peerknowledge.png',
               },
             ],
           },
@@ -408,7 +408,7 @@ export const caseStudies = {
       'We designed and developed a tablet-based serious game exploring how gamification could support phonological awareness training for kindergarten children with phonological difficulties.',
       'The project combined speech and language research with user-centered design, iterative usability testing, expert feedback, and game development.',
     ],
-    heroImage: '/images/pandashero.png',
+    heroImage: 'images/pandashero.png',
 
     facts: [
       {
@@ -550,7 +550,7 @@ export const caseStudies = {
             ],
           },
 
-          { type: 'subheading', number: 1, title: 'Understand the problem', image: '/images/MenuScene.png', caption: null, },
+          { type: 'subheading', number: 1, title: 'Understand the problem', image: 'images/MenuScene.png', caption: null, },
           {
             type: 'text',
             body: [
@@ -748,17 +748,17 @@ export const caseStudies = {
               {
                 title: 'Level 1: Sound Candy',
                 text: 'Children listen to a sound or nonsense word and drag a piece of “sound candy” to the animal associated with the corresponding phoneme. Simple, visual, and suitable for touchscreens and small hands.',
-                image: '/images/Bane1Iteration2.png',
+                image: 'images/Bane1Iteration2.png',
               },
               {
                 title: 'Level 2: Sound Selection',
                 text: 'Children listen to a sound and navigate between animals to select the one representing the correct phoneme.',
-                image: '/images/Level 2 - Iteration3.png',
+                image: 'images/Level 2 - Iteration3.png',
               },
               {
                 title: 'Level 3: Sound Puzzle',
                 text: 'Children listen to a sound and identify the matching animal within a visual grid.',
-                image: '/images/iteration3level3.png',
+                image: 'images/iteration3level3.png',
               },
             ],
 
@@ -772,17 +772,17 @@ export const caseStudies = {
               {
                 title: 'Level 4: Sound Candy',
                 text: 'Children listen to a sound or nonsense word and drag a piece of “sound candy” to the animal associated with the corresponding phoneme. Simple, visual, and suitable for touchscreens and small hands.',
-                image: '/images/Bane4Iteration2.png',
+                image: 'images/Bane4Iteration2.png',
               },
               {
                 title: 'Level 5: Sound Selection',
                 text: 'Children listen to a sound and navigate between animals to select the one representing the correct phoneme.',
-                image: '/images/Level 5 - Iteration3.png',
+                image: 'images/Level 5 - Iteration3.png',
               },
               {
                 title: 'Level 6: Sound Puzzle',
                 text: 'Children listen to a sound and identify the matching animal within a visual grid.',
-                image: '/images/level6.png',
+                image: 'images/level6.png',
               },
             ],
 
@@ -851,7 +851,7 @@ export const caseStudies = {
       'We explored how the physical AAU study card could become a digital product without sacrificing the speed and simplicity students already relied on.',
       'The final concept combined identification, NFC campus access, room permissions, student discounts, and university information in one mobile experience.',
     ],
-    heroImage: '/images/studycardhero.png',
+    heroImage: 'images/studycardhero.png',
 
     facts: [
       {
@@ -913,7 +913,7 @@ export const caseStudies = {
         nav: 'Why',
         label: 'Why?',
         title: 'What problem were we solving?',
-        image: '/images/digitalcardsketch.png',
+        image: 'images/digitalcardsketch.png',
         caption: 'Initial Design sketches exploring how a digital study card could be more than a copy of the physical card.',
         blocks: [
           {
@@ -945,7 +945,7 @@ export const caseStudies = {
         nav: 'What',
         label: 'What?',
         title: 'What did I do?',
-        image: '/images/studycardinitial.png',
+        image: 'images/studycardinitial.png',
         caption: '',
         blocks: [
           {
@@ -1044,7 +1044,7 @@ export const caseStudies = {
             type: 'subheading',
             number: 3,
             title: 'Turn research into product requirements',
-            image: '/images/digitalcardjourney.png',
+            image: 'images/digitalcardjourney.png',
             caption: 'User journey mapping helped us identify pain points and opportunities for a digital study card.',
           },
           {
@@ -1282,7 +1282,7 @@ export const caseStudies = {
       'We designed and developed a VR driving-theory simulator exploring how immersive scenarios could help learner drivers understand concepts that are difficult to communicate through static images.',
       'The experience placed users inside traffic situations where they had to observe, orient themselves, make decisions, and receive feedback.',
     ],
-    heroImage: '/images/drivingcard.png',
+    heroImage: 'images/drivingcard.png',
 
     facts: [
       {
@@ -1563,17 +1563,17 @@ export const caseStudies = {
               {
                 title: 'Starting from the roadside',
                 text: 'Assess approaching vehicles and speed before entering the road.',
-                image: '/images/Starting from Roadside.png',
+                image: 'images/Starting from Roadside.png',
               },
               {
                 title: 'Turning at an intersection',
                 text: 'Orient around vehicles, cyclists, pedestrians, and traffic signals.',
-                image: '/images/Intersection.png',
+                image: 'images/Intersection.png',
               },
               {
                 title: 'Passing a stationary vehicle',
                 text: 'Assess oncoming traffic while positioning around another vehicle.',
-                image: '/images/Overtaking.png',
+                image: 'images/Overtaking.png',
               },
             ],
           },
@@ -1590,7 +1590,7 @@ export const caseStudies = {
             type: 'subheading',
             number: 5,
             title: 'Design interaction for immersion and usability',
-            image: '/images/drivingcollage.png',
+            image: 'images/drivingcollage.png',
             caption: '',
           },
           {
@@ -1761,7 +1761,7 @@ export const caseStudies = {
       'SpyRun is a mobile endless-runner game exploring how auditory-processing exercises could be embedded into gameplay for children with Auditory Processing Disorder.',
       'The experience combined spatial audio, background noise, sound localization, and listening tasks inspired by existing APD training.',
     ],
-    heroImage: '/images/spyrunhero.png',
+    heroImage: 'images/spyrunhero.png',
 
     facts: [
       {
@@ -2013,17 +2013,17 @@ export const caseStudies = {
               {
                 title: 'Distractor Agent',
                 text: 'Two voices compete for attention. The player must identify and follow the relevant speaker, targeting figure/ground and dichotic listening.',
-                image: '/images/Biler.png',
+                image: 'images/Biler.png',
               },
               {
                 title: 'Selection of Words',
                 text: 'The player identifies a spoken target among visual choices while background noise competes for attention.',
-                image: '/images/3 ting.png',
+                image: 'images/3 ting.png',
               },
               {
                 title: 'Spatial Audio Laser',
                 text: 'The player hears a threat approaching from one direction and must move away from it, targeting sound localization.',
-                image: '/images/Laser 1.png',
+                image: 'images/Laser 1.png',
               },
             ],
           },
@@ -2218,7 +2218,7 @@ export const caseStudies = {
       'We designed an interactive museum exhibit for Thorvaldsens Museum that combined physical cards, projected feedback, object detection, and game-based learning.',
       'Visitors matched question cards with sculpture cards on a table. A camera recognized the cards using computer vision, and a projector responded in real time with feedback and information about the museum. The goal was to help visitors gain and retain knowledge in a social and interactive way.',
     ],
-    heroImage: '/images/thorhero.png',
+    heroImage: 'images/thorhero.png',
 
     facts: [
       {
@@ -2385,7 +2385,7 @@ export const caseStudies = {
             type: 'subheading',
             number: 2,
             title: 'Define the experience principles',
-            image: '/images/setupgabe.jpg',
+            image: 'images/setupgabe.jpg',
             caption: '',
           },
           {
@@ -2472,17 +2472,17 @@ export const caseStudies = {
               {
                 title: '1. Choose',
                 text: 'Select a question card and the sculpture believed to match it.',
-                image: '/images/cardwithsymbolscorrect.png',
+                image: 'images/cardwithsymbolscorrect.png',
               },
               {
                 title: '2. Place',
                 text: 'Place both cards inside the projected interaction areas.',
-                image: '/images/nocardscreens.png',
+                image: 'images/nocardscreens.png',
               },
               {
                 title: '3. Feedback',
                 text: 'The system recognizes the pair and responds directly on the table.',
-                image: '/images/cardscreens.png',
+                image: 'images/cardscreens.png',
               },
             ],
           },
@@ -2562,7 +2562,7 @@ export const caseStudies = {
             type: 'subheading',
             number: 6,
             title: 'Build and test the full installation',
-            image: '/images/setupnoone.jpg',
+            image: 'images/setupnoone.jpg',
             caption: '',
           },
           {
@@ -2672,7 +2672,7 @@ export const caseStudies = {
       'We designed and developed a four-player VR chase game exploring whether Multiplayer Dynamic Difficulty Adjustment could balance players with different skill levels.',
       'Instead of modifying player abilities, the system regenerated the maze around each player’s performance, giving struggling players more distance from the seeker and stronger players less.',
     ],
-    heroImage: '/images/mazechase.png',
+    heroImage: 'images/mazechase.png',
 
     facts: [
       {
@@ -2906,7 +2906,7 @@ export const caseStudies = {
             type: 'subheading',
             number: 4,
             title: 'Build the game around the adaptive loop',
-            image: '/images/mazephase.png',
+            image: 'images/mazephase.png',
             caption: '',
           },
           {
@@ -2940,7 +2940,7 @@ export const caseStudies = {
             type: 'subheading',
             number: 5,
             title: 'Generate the challenge procedurally',
-            image: '/images/maze.png',
+            image: 'images/maze.png',
             caption: '',
           },
           {
@@ -3142,7 +3142,7 @@ export const caseStudies = {
       'We designed and developed an immersive VR experience about noise-induced hearing loss for young adults aged 18–25.',
       'The experience combined education, simulated hearing loss, and preventative actions to explore whether VR could move users beyond awareness toward more personally relevant hearing-health decisions.',
     ],
-    heroImage: '/images/dangerscard.png',
+    heroImage: 'images/dangerscard.png',
 
     facts: [
       {
@@ -3366,17 +3366,17 @@ export const caseStudies = {
               {
                 title: '1. Apartment — Learn',
                 text: 'Build foundational knowledge about hearing loss, decibels, and prevention.',
-                image: '/images/apartment.png',
+                image: 'images/apartment.png',
               },
               {
                 title: '2. Café — Experience',
                 text: 'Experience how hearing loss can affect an ordinary social interaction.',
-                image: '/images/cafe.png',
+                image: 'images/cafe.png',
               },
               {
                 title: '3. Festival — Act',
                 text: 'Practise protective decisions around exposure, distance, and earplugs.',
-                image: '/images/festival.png',
+                image: 'images/festival.png',
               },
             ],
           },
@@ -3393,7 +3393,7 @@ export const caseStudies = {
             type: 'subheading',
             number: 4,
             title: 'Make abstract consequences tangible',
-            image: '/images/wrist-ui.png',
+            image: 'images/wrist-ui.png',
             caption: '',
           },
           {
@@ -3666,7 +3666,7 @@ export const caseStudies = {
     notice:
       'Due to confidentiality agreements, client-specific mockups and unreleased designs cannot be shown. This case study therefore focuses on representative challenges, design decisions, and implementation patterns.',
 
-    heroImage: '/images/Relesyscard.png',
+    heroImage: 'images/Relesyscard.png',
     heroNote: 'Selected client work confidential',
 
     facts: [
@@ -3741,7 +3741,7 @@ export const caseStudies = {
         nav: 'Why',
         label: 'Why?',
         title: 'The design challenge',
-        image: '/images/relesys1.png',
+        image: 'images/relesys1.png',
         caption: '',
         blocks: [
           {
@@ -3844,7 +3844,7 @@ export const caseStudies = {
             type: 'subheading',
             number: 2,
             title: 'Translate brand identity into product language',
-            image: '/images/relesysganni.png',
+            image: 'images/relesysganni.png',
             caption: null,
           },
           {

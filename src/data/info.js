@@ -1,6 +1,6 @@
 // All content for the Info page lives here.
 //
-// photo: put a file in /public/images and reference it as '/images/<file>'.
+// photo: put a file in /public/images and reference it as 'images/<file>'.
 //        Leave it null to show a soft placeholder instead.
 // icon:  one of the names in src/components/Icon.jsx.
 
@@ -12,7 +12,7 @@ export const about = {
     'My interests span UX, UI, product and digital design, alongside project coordination and management in IT-focused teams. I’m especially drawn to work that makes everyday tasks easier, learning more engaging, or information easier to understand.',
   ],
   tags: ['UX/UI', 'Product design', 'Digital design', 'User research', 'Project coordination'],
-  photo: '/images/Mig.jpg',
+  photo: 'images/Mig.jpg',
   //photoNote: ['Curious about people', '+ how things work'],
 };
 
@@ -175,7 +175,7 @@ export const contact = {
   note: ['I promise I’m friendlier', 'than an email form.'],
   email: 'amanda-johansen@hotmail.com',
   linkedin: 'https://www.linkedin.com/',
-  resume: '/resume.pdf',
+  resume: 'resume.pdf',
 };
 
 export const footerText = 'UX/UI and Digital designer.';

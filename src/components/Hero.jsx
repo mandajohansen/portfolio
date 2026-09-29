@@ -17,7 +17,7 @@ const HERO = {
   roles: ['UX/UI Designer', 'Product Designer', 'Digital Designer', 'Project Coordinator'],
 
   // Your photo on the right, with its sticker and spinning badge.
-  photo: '/images/me.jpg',
+  photo: 'images/me.jpg',
   sticker: 'Hi, I’m Amanda!',
   badge: 'DIGITAL DESIGNER • OPEN TO WORK • ',
 };
