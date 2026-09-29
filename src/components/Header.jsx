@@ -24,7 +24,7 @@ export default function Header({ tab, light, onTabChange }) {
       </nav>
 
       <div className="header__links">
-        <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">
+        <a href="https://www.linkedin.com/in/amandaljohansen" target="_blank" rel="noreferrer">
           LinkedIn <Arrow direction="right" />
         </a>
         <a href="resume.pdf" target="_blank" rel="noreferrer">
