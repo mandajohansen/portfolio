@@ -1841,8 +1841,7 @@ body {
   position: relative;
   padding: 90px var(--gutter) 160px;
   background:
-    linear-gradient(180deg, var(--sunset-1), var(--sunset-2), var(--sunset-3), var(--sunset-4), var(--sunset-5), var(--sunset-6));
-  color: var(--ink);
+    linear-gradient(180deg, var(--peach-deep), var(--peach-light));
 }
 
 .contact__inner {
