@@ -174,7 +174,7 @@ export const contact = {
   text: 'I’m always happy to hear about new opportunities, collaborations or simply have a conversation about design.',
   note: ['I promise I’m friendlier', 'than an email form.'],
   email: 'amanda-johansen@hotmail.com',
-  linkedin: 'https://www.linkedin.com/',
+  linkedin: 'https://www.linkedin.com/in/amandaljohansen/',
   resume: 'resume.pdf',
 };
 

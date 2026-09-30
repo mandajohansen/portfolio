@@ -33,9 +33,9 @@
 
   /* Peach family (marquee, boxes, badges) */
   --peach-pale: #fde7d6;
-  --peach-light: #fbe1cd;
-  --peach-deep: #fbd2b2;
-  --peach-deep-rgb: 251 210 178;
+  --peach-light: #fbcddd;
+  --peach-deep: #ffe6a8;
+  --peach-deep-rgb: 255 230 168;
 
   /* Greens */
   --sage: #e8ecda;           /* featured result card */
@@ -46,12 +46,12 @@
   --chosen: #33b962;         /* "Chosen design" badge */
 
   /* Sunset gradient (the contact band on the Info page) */
-  --sunset-1: #e7ad6c;
-  --sunset-2: #efb978;
-  --sunset-3: #f3c98c;
-  --sunset-4: #eec48a;
-  --sunset-5: #d9b475;
-  --sunset-6: #b8a060;
+  --sunset-1: #ffc36b;
+  --sunset-2: #ffd078;
+  --sunset-3: #ffdc83;
+  --sunset-4: #ffe58c;
+  --sunset-5: #ffdf7e;
+  --sunset-6: #ffd26f;
 
   /* Empty picture placeholders */
   --placeholder-1: #f6e8dc;
@@ -247,7 +247,7 @@ button {
 
 .marquee {
   overflow: hidden;
-  padding: 38px 26px;
+  padding: 28px 26px;
   font-style: italic;
   font-size: 24px;
   font-weight: 400;
@@ -1841,8 +1841,8 @@ body {
   position: relative;
   padding: 90px var(--gutter) 160px;
   background:
-    linear-gradient(180deg, var(--sunset-1), var(--sunset-6));
-  color: var(--white);
+    linear-gradient(180deg, var(--sunset-1), var(--sunset-2), var(--sunset-3), var(--sunset-4), var(--sunset-5), var(--sunset-6));
+  color: var(--ink);
 }
 
 .contact__inner {
@@ -1859,7 +1859,7 @@ body {
   font-size: 18px;
   font-weight: 300;
   text-transform: uppercase;
-  color: rgb(var(--white-rgb) / 0.85);
+  color: rgb(var(--black-rgb) / 0.7);
 }
 
 .contact__title {
@@ -1875,7 +1875,7 @@ body {
   max-width: 480px;
   font-size: 15px;
   line-height: 1.6;
-  color: rgb(var(--white-rgb) / 0.92);
+  color: var(--muted);
 }
 
 .contact__actions {
@@ -1905,7 +1905,7 @@ body {
 }
 
 .contact__note {
-  color: var(--white);
+  color: var(--ink);
 }
 
 .contact__card {
