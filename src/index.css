@@ -2944,6 +2944,7 @@ body {
     right: calc(100% / (2 * var(--n, 5)));
   }
 
+  .track__item {
   justify-items: center;
   padding: 0 8px;
   text-align: center;
