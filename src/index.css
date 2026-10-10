@@ -10,26 +10,37 @@
    ========================================================================== */
 :root {
   /* Core */
-  --cream: #fcf4ec;          /* page background */
-  --ink: #1c1c1c;            /* main text */
-  --muted: #3a3a3a;          /* body text */
-  --accent: #e8893a;         /* orange: labels, numbers, links, highlights */
+  --cream: #fcf4ec;
+  /* page background */
+  --ink: #1c1c1c;
+  /* main text */
+  --muted: #3a3a3a;
+  /* body text */
+  --accent: #e8893a;
+  /* orange: labels, numbers, links, highlights */
   --accent-rgb: 232 137 58;
-  --accent-dark: #b8703a;    /* darker orange for icons */
+  --accent-dark: #b8703a;
+  /* darker orange for icons */
   --white: #fff;
   --white-rgb: 255 255 255;
   --black-rgb: 0 0 0;
 
   /* Text shades */
-  --header-name: #2a2016;    /* name in the top left of the header */
-  --header-link-hover: #d67a2e; /* LinkedIn / Resume on hover */
+  --header-name: #2a2016;
+  /* name in the top left of the header */
+  --header-link-hover: #d67a2e;
+  /* LinkedIn / Resume on hover */
   --text-grey: #6b6b6b;
-  --text-faint: #8a8178;     /* side menu items */
+  --text-faint: #8a8178;
+  /* side menu items */
   --text-brown: #9a8573;
   --text-warm: #3a2f28;
-  --text-copyright: #9a8f86; /* © line in the footer */
-  --scribble: #4a3f36;       /* handwritten notes */
-  --navy: #1f2a38;           /* numbers in the result cards */
+  --text-copyright: #9a8f86;
+  /* © line in the footer */
+  --scribble: #4a3f36;
+  /* handwritten notes */
+  --navy: #1f2a38;
+  /* numbers in the result cards */
 
   /* Peach family (marquee, boxes, badges) */
   --peach-pale: #fde7d6;
@@ -38,12 +49,16 @@
   --peach-deep-rgb: 255 230 168;
 
   /* Greens */
-  --sage: #e8ecda;           /* featured result card */
-  --sage-light-rgb: 226 232 208; /* Results / Education band */
+  --sage: #e8ecda;
+  /* featured result card */
+  --sage-light-rgb: 226 232 208;
+  /* Results / Education band */
   --sage-bright-rgb: 226 234 208;
-  --status-green: #7fd18b;   /* "open to opportunities" dot */
+  --status-green: #7fd18b;
+  /* "open to opportunities" dot */
   --status-green-rgb: 127 209 139;
-  --chosen: #33b962;         /* "Chosen design" badge */
+  --chosen: #33b962;
+  /* "Chosen design" badge */
 
   /* Sunset gradient (the contact band on the Info page) */
   --sunset-1: #ffc36b;
@@ -91,21 +106,26 @@
      The "-to" colour is also the tilted card behind the photo on that project's page. */
   --card-relesys-from: #fde3d0;
   --card-relesys-to: #f9cdb0;
-  --card-thesis-from: #fdf6d2;     /* Internal Communication app */
+  --card-thesis-from: #fdf6d2;
+  /* Internal Communication app */
   --card-thesis-to: #f9e9a6;
   --card-spyrun-from: #e3f1dc;
   --card-spyrun-to: #cfe6c6;
   --card-pandas-from: #d8ecf6;
   --card-pandas-to: #b9dcf0;
-  --card-study-card-from: #ece4fb; /* Digital Study Card */
+  --card-study-card-from: #ece4fb;
+  /* Digital Study Card */
   --card-study-card-to: #d9cbf5;
-  --card-vr-driving-from: #FF9999; /* VR Driving Simulator */
+  --card-vr-driving-from: #FF9999;
+  /* VR Driving Simulator */
   --card-vr-driving-to: #FF9999;
-  --card-exhibit-from: #efe7df;    /* Interactive Exhibit */
+  --card-exhibit-from: #efe7df;
+  /* Interactive Exhibit */
   --card-exhibit-to: #d9ccbf;
   --card-maze-chase-from: #94E5EE;
   --card-maze-chase-to: #AEECF3;
-  --card-decibel-from: #7BBA92;    /* Dangers of Decibel */
+  --card-decibel-from: #7BBA92;
+  /* Dangers of Decibel */
   --card-decibel-to: #8CC9A2;
 
   /* Marquee role colours, in the order of the roles */
@@ -116,10 +136,13 @@
   --marquee-5: #8a5bb0;
 
   /* Info page */
-  --tint-portrait: #f6d3c8;        /* card behind your photo */
-  --edu-master: #f0a060;           /* education dots */
+  --tint-portrait: #f6d3c8;
+  /* card behind your photo */
+  --edu-master: #f0a060;
+  /* education dots */
   --edu-bachelor: #a3b98a;
-  --skill-design: #f8d6d1;         /* skill group icon circles */
+  --skill-design: #f8d6d1;
+  /* skill group icon circles */
   --skill-research: #fbe6ae;
   --skill-tools: #d6e3fa;
   --skill-methods: #dfe8d3;
@@ -590,7 +613,7 @@ button {
 }
 
 /* Paragraphs are spaced apart; a list sits tight against its neighbours. */
-.cs__text p + p {
+.cs__text p+p {
   margin-top: 22px;
 }
 
@@ -608,7 +631,7 @@ button {
 }
 
 /* Text after a bullet list gets the same breathing room as between paragraphs */
-.cs__text ul + p {
+.cs__text ul+p {
   margin-top: 22px;
 }
 
@@ -718,12 +741,29 @@ button {
   font-size: 24px;
 }
 
-.steps__num--1 { background: var(--step-1); }
-.steps__num--2 { background: var(--step-2); }
-.steps__num--3 { background: var(--step-3); }
-.steps__num--4 { background: var(--step-4); }
-.steps__num--5 { background: var(--step-5); }
-.steps__num--6 { background: var(--step-6); }
+.steps__num--1 {
+  background: var(--step-1);
+}
+
+.steps__num--2 {
+  background: var(--step-2);
+}
+
+.steps__num--3 {
+  background: var(--step-3);
+}
+
+.steps__num--4 {
+  background: var(--step-4);
+}
+
+.steps__num--5 {
+  background: var(--step-5);
+}
+
+.steps__num--6 {
+  background: var(--step-6);
+}
 
 .steps__label {
   font-size: 16px;
@@ -785,7 +825,7 @@ button {
   border-radius: 10px 10px 0 0;
 }
 
-.choice > div:last-child {
+.choice>div:last-child {
   padding-bottom: 18px;
 }
 
@@ -878,6 +918,7 @@ button {
 }
 
 @media (max-width: 1080px) {
+
   .cs__row--4,
   .cs__outcomes {
     grid-template-columns: repeat(2, 1fr);
@@ -938,7 +979,7 @@ button {
 
 /* ---------- Case study side nav ---------- */
 
-.cs__content > section {
+.cs__content>section {
   scroll-margin-top: 40px;
 }
 
@@ -1003,6 +1044,7 @@ button {
 }
 
 @media (max-width: 520px) {
+
   .cs__row--4,
   .cs__outcomes {
     grid-template-columns: 1fr;
@@ -1041,16 +1083,16 @@ button {
   transform: translateX(-3px) rotate(180deg);
 }
 
-.cs__block + .cs__block {
+.cs__block+.cs__block {
   margin-top: 32px;
 }
 
 /* A subheading starts a new chapter, so it gets more room above it. */
-.cs__block + .cs__block--subheading {
+.cs__block+.cs__block--subheading {
   margin-top: 64px;
 }
 
-.cs__block--subheading + .cs__block {
+.cs__block--subheading+.cs__block {
   margin-top: 20px;
 }
 
@@ -1135,7 +1177,7 @@ button {
   padding: 16px 0;
 }
 
-.insight__row + .insight__row {
+.insight__row+.insight__row {
   border-top: 1px solid rgb(var(--black-rgb) / 0.07);
 }
 
@@ -1274,7 +1316,8 @@ button {
 
 .cs {
   position: relative;
-  z-index: 0; /* own stacking context so the colour blobs sit above the body background */
+  z-index: 0;
+  /* own stacking context so the colour blobs sit above the body background */
   --glass: rgb(var(--white-rgb) / 0.42);
   --glass-strong: rgb(var(--white-rgb) / 0.62);
   --glass-border: rgb(var(--white-rgb) / 0.75);
@@ -1389,11 +1432,25 @@ button {
 }
 
 /* Extra colours for case studies with more than six numbered steps */
-.steps__num--7 { background: var(--step-7); }
-.steps__num--8 { background: var(--step-8); }
-.steps__num--9 { background: var(--step-9); }
-.steps__num--10 { background: var(--step-10); }
-.steps__num--11 { background: var(--step-11); }
+.steps__num--7 {
+  background: var(--step-7);
+}
+
+.steps__num--8 {
+  background: var(--step-8);
+}
+
+.steps__num--9 {
+  background: var(--step-9);
+}
+
+.steps__num--10 {
+  background: var(--step-10);
+}
+
+.steps__num--11 {
+  background: var(--step-11);
+}
 
 .note__dot {
   display: inline-block;
@@ -1467,18 +1524,19 @@ button {
 /* Reuses the case-study layout (.cs grid, glass tokens, colour glows, side nav). */
 
 body {
-  overflow-x: clip; /* lets full-width bands bleed past the content column */
+  overflow-x: clip;
+  /* lets full-width bands bleed past the content column */
 }
 
 .info-page {
   padding-bottom: 100px;
 }
 
-.info-page .cs__content > section {
+.info-page .cs__content>section {
   padding-top: 90px;
 }
 
-.info-page .cs__content > section:first-child {
+.info-page .cs__content>section:first-child {
   padding-top: 40px;
 }
 
@@ -1554,7 +1612,7 @@ body {
   height: 34px;
 }
 
-.scribble > span {
+.scribble>span {
   display: grid;
 }
 
@@ -1701,7 +1759,7 @@ body {
   background: var(--cream);
 }
 
-.timeline__item > div {
+.timeline__item>div {
   max-width: 620px;
   padding-left: 12px;
 }
@@ -1738,7 +1796,7 @@ body {
   background: rgb(var(--sage-light-rgb) / 0.55);
 }
 
-.info-page .cs__content > .education {
+.info-page .cs__content>.education {
   margin-top: 40px;
   padding: 60px 0 80px;
 }
@@ -1933,7 +1991,7 @@ body {
   background: rgb(var(--white-rgb) / 0.6);
 }
 
-.contact__row > span {
+.contact__row>span {
   display: grid;
   gap: 2px;
 }
@@ -1943,7 +2001,7 @@ body {
   font-size: 15px;
 }
 
-.contact__row > span > span {
+.contact__row>span>span {
   display: inline-flex;
   align-items: center;
   gap: 6px;
@@ -1952,6 +2010,7 @@ body {
 }
 
 @media (max-width: 1080px) {
+
   .about,
   .beyond {
     grid-template-columns: 1fr;
@@ -1977,6 +2036,7 @@ body {
 }
 
 @media (max-width: 720px) {
+
   .beyond__items,
   .education__cards,
   .skills__groups {
@@ -2005,7 +2065,7 @@ body {
     margin-top: 4px;
   }
 
-  .timeline__item > div {
+  .timeline__item>div {
     grid-column: 2;
     padding-left: 0;
   }
@@ -2046,7 +2106,7 @@ body {
 }
 
 /* No gap or line between the sunset contact band and the footer on the Info page */
-.contact + .footer {
+.contact+.footer {
   border-top: 0;
 }
 
@@ -2388,6 +2448,7 @@ body {
 }
 
 @media (prefers-reduced-motion: reduce) {
+
   .card,
   .card__image,
   .card__button,
@@ -2484,6 +2545,7 @@ body {
 }
 
 @media (prefers-reduced-motion: reduce) {
+
   .info-card,
   .note,
   .insight,
@@ -2631,7 +2693,7 @@ body {
   aspect-ratio: 9 / 16;
 }
 
-.choice > div:last-child {
+.choice>div:last-child {
   padding-bottom: 0;
 }
 
@@ -2882,11 +2944,9 @@ body {
     right: calc(100% / (2 * var(--n, 5)));
   }
 
-  .track__item {
-    grid-template-columns: 13px 1fr;
-    align-items: center;
-    gap: 16px;
-  }
+  justify-items: center;
+  padding: 0 8px;
+  text-align: center;
 }
 
 /* Insight cards: the design decision is the headline of each card.
@@ -2904,7 +2964,7 @@ body {
   border-left: 2px solid var(--accent);
 }
 
-.insight__row--decision + .insight__row {
+.insight__row--decision+.insight__row {
   border-top: 0;
 }
 
@@ -2964,6 +3024,7 @@ body {
   box-shadow: 0 0 0 5px var(--cream);
   transition: transform 0.25s ease, background 0.25s ease;
 }
+
 .track__item:first-child .track__dot,
 .track__item:last-child .track__dot {
   background: var(--cream);
@@ -3101,7 +3162,7 @@ body {
     grid-row: 1;
   }
 
-  .insight:only-child .insight__row + .insight__row {
+  .insight:only-child .insight__row+.insight__row {
     border-top: 0;
   }
 
@@ -3214,12 +3275,29 @@ body {
   transform: none;
 }
 
-.education__cards.is-visible .edu-card .tags li:nth-child(1) { transition-delay: calc(0.5s + var(--i) * 0.18s); }
-.education__cards.is-visible .edu-card .tags li:nth-child(2) { transition-delay: calc(0.58s + var(--i) * 0.18s); }
-.education__cards.is-visible .edu-card .tags li:nth-child(3) { transition-delay: calc(0.66s + var(--i) * 0.18s); }
-.education__cards.is-visible .edu-card .tags li:nth-child(4) { transition-delay: calc(0.74s + var(--i) * 0.18s); }
-.education__cards.is-visible .edu-card .tags li:nth-child(5) { transition-delay: calc(0.82s + var(--i) * 0.18s); }
-.education__cards.is-visible .edu-card .tags li:nth-child(n + 6) { transition-delay: calc(0.9s + var(--i) * 0.18s); }
+.education__cards.is-visible .edu-card .tags li:nth-child(1) {
+  transition-delay: calc(0.5s + var(--i) * 0.18s);
+}
+
+.education__cards.is-visible .edu-card .tags li:nth-child(2) {
+  transition-delay: calc(0.58s + var(--i) * 0.18s);
+}
+
+.education__cards.is-visible .edu-card .tags li:nth-child(3) {
+  transition-delay: calc(0.66s + var(--i) * 0.18s);
+}
+
+.education__cards.is-visible .edu-card .tags li:nth-child(4) {
+  transition-delay: calc(0.74s + var(--i) * 0.18s);
+}
+
+.education__cards.is-visible .edu-card .tags li:nth-child(5) {
+  transition-delay: calc(0.82s + var(--i) * 0.18s);
+}
+
+.education__cards.is-visible .edu-card .tags li:nth-child(n + 6) {
+  transition-delay: calc(0.9s + var(--i) * 0.18s);
+}
 
 /* 2. On hover the card lifts, and the dot turns into a graduation cap
       that gets tossed in the air. */
@@ -3261,16 +3339,20 @@ body {
     opacity: 1;
     transform: translate(-50%, -50%) scale(0.5) rotate(0deg);
   }
+
   45% {
     opacity: 1;
     transform: translate(-50%, -190%) scale(1) rotate(-200deg);
   }
+
   75% {
     transform: translate(-50%, -40%) scale(1) rotate(-350deg);
   }
+
   88% {
     transform: translate(-50%, -62%) scale(1) rotate(-360deg);
   }
+
   100% {
     opacity: 1;
     transform: translate(-50%, -50%) scale(1) rotate(-360deg);
@@ -3278,6 +3360,7 @@ body {
 }
 
 @media (prefers-reduced-motion: reduce) {
+
   .education__cards .edu-card,
   .education__cards .edu-card .tags li {
     opacity: 1;
@@ -3408,7 +3491,7 @@ body {
   animation: hero-in 0.9s ease 0.55s both;
 }
 
-.hero .hero__roles-label + .hero__proof {
+.hero .hero__roles-label+.hero__proof {
   margin-top: 10px;
 }
 
@@ -3579,6 +3662,7 @@ body {
     opacity: 0;
     transform: translateY(18px);
   }
+
   to {
     opacity: 1;
     transform: none;
@@ -3589,6 +3673,7 @@ body {
   70% {
     box-shadow: 0 0 0 8px rgb(var(--status-green-rgb) / 0);
   }
+
   100% {
     box-shadow: 0 0 0 0 rgb(var(--status-green-rgb) / 0);
   }
@@ -3625,6 +3710,7 @@ body {
 }
 
 @media (prefers-reduced-motion: reduce) {
+
   .hero__intro,
   .hero__line,
   .hero__roles-label,
@@ -3655,6 +3741,7 @@ body {
 /* ---------- Case study: mobile fixes ---------- */
 
 @media (max-width: 1080px) {
+
   /* Side nav is hidden here, so drop its column (and the gap) that the
      max-content rule above would otherwise keep on the right */
   .cs {
