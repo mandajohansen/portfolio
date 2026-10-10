@@ -477,7 +477,7 @@ button {
 
 .cs {
   --peach: var(--peach-pale);
-  --badge: var(--accent);
+  --badge: #ffd0a8;
   --badge-ink: var(--accent-dark);
   --card: rgb(var(--white-rgb) / 0.55);
   display: grid;
