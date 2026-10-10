@@ -477,7 +477,7 @@ button {
 
 .cs {
   --peach: var(--peach-pale);
-  --badge: var(--peach-light);
+  --badge: var(--accent);
   --badge-ink: var(--accent-dark);
   --card: rgb(var(--white-rgb) / 0.55);
   display: grid;
@@ -2879,9 +2879,9 @@ body {
   }
 
   .track__item {
-    justify-items: center;
-    padding: 0 8px;
-    text-align: center;
+    grid-template-columns: 13px 1fr;
+    align-items: center;
+    gap: 16px;
   }
 }
 
@@ -3646,4 +3646,31 @@ body {
 .tabs__item.is-active {
   background: var(--white);
   box-shadow: 0 2px 10px rgb(var(--clay-rgb) / 0.16);
+}
+
+/* ---------- Case study: mobile fixes ---------- */
+
+@media (max-width: 1080px) {
+  /* Side nav is hidden here, so drop its column (and the gap) that the
+     max-content rule above would otherwise keep on the right */
+  .cs {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  /* Title + text cards wrap onto new rows instead of squeezing off-screen */
+  .notes {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  }
+}
+
+/* Process overview: one step per row on phones so labels don't collide */
+@media (max-width: 480px) {
+  .steps {
+    grid-template-columns: minmax(0, 1fr);
+    row-gap: 14px;
+  }
+
+  .steps-panel {
+    padding: 20px;
+  }
 }
