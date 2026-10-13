@@ -10,142 +10,149 @@
    ========================================================================== */
 :root {
   /* Core */
-  --cream: #fcf4ec;
+  --cream: #f9f5ee;
   /* page background */
   --ink: #1c1c1c;
   /* main text */
   --muted: #3a3a3a;
   /* body text */
-  --accent: #e8893a;
+  --accent: #b24a55;
   /* orange: labels, numbers, links, highlights */
-  --accent-rgb: 232 137 58;
-  --accent-dark: #b8703a;
+  --accent-rgb: 178 74 85;
+  --accent-dark: #8e3a44;
   /* darker orange for icons */
   --white: #fff;
   --white-rgb: 255 255 255;
   --black-rgb: 0 0 0;
 
   /* Text shades */
-  --header-name: #2a2016;
+  --header-name: #2a2420;
   /* name in the top left of the header */
-  --header-link-hover: #d67a2e;
+  --header-link-hover: #b24a55;
   /* LinkedIn / Resume on hover */
   --text-grey: #6b6b6b;
   --text-faint: #8a8178;
   /* side menu items */
-  --text-brown: #9a8573;
-  --text-warm: #3a2f28;
+  --text-brown: #8f7a72;
+  --text-warm: #3a2e2c;
   --text-copyright: #9a8f86;
   /* © line in the footer */
-  --scribble: #4a3f36;
+  --scribble: #4a3d3a;
   /* handwritten notes */
-  --navy: #1f2a38;
-  /* numbers in the result cards */
+  --navy: #3f451c;
+  /* numbers in the result cards (deep olive) */
 
-  /* Peach family (marquee, boxes, badges) */
-  --peach-pale: #fde7d6;
-  --peach-light: #fbcddd;
-  --peach-deep: #ffe6a8;
-  --peach-deep-rgb: 255 230 168;
 
-  /* Greens */
-  --sage: #e8ecda;
+  /* Dusty pink family (marquee, boxes, badges), tints of #cc8980 */
+  --peach-pale: #f3dfdc;
+  --peach-light: #efd6d2;
+  --peach-deep: #e6c0ba;
+  --peach-strong: #cb9992;
+  --peach-deep-rgb: 230 192 186;
+
+  /* Olive family, tints of #666f2e */
+  --sage: #c9cdab;
   /* featured result card */
-  --sage-light-rgb: 226 232 208;
+  --sage-light-rgb: 196 202 160;
   /* Results / Education band */
-  --sage-bright-rgb: 226 234 208;
-  --status-green: #7fd18b;
+  --sage-bright-rgb: 205 210 175;
+  --status-green: #8c9a45;
   /* "open to opportunities" dot */
-  --status-green-rgb: 127 209 139;
-  --chosen: #33b962;
+  --status-green-rgb: 140 154 69;
+  --chosen: #666f2e;
   /* "Chosen design" badge */
 
+
+
   /* Sunset gradient (the contact band on the Info page) */
-  --sunset-1: #ffc36b;
-  --sunset-2: #ffd078;
-  --sunset-3: #ffdc83;
-  --sunset-4: #ffe58c;
-  --sunset-5: #ffdf7e;
-  --sunset-6: #ffd26f;
+  --sunset-1: #cc8980;
+  --sunset-2: #d59a8a;
+  --sunset-3: #dcb294;
+  --sunset-4: #d6bd92;
+  --sunset-5: #cfc48e;
+  --sunset-6: #a9a466;
 
   /* Empty picture placeholders */
-  --placeholder-1: #f6e8dc;
-  --placeholder-2: #efdccd;
+  --placeholder-1: #f3f0e3;
+  --placeholder-2: #e9e4cf;
 
   /* Numbered step circles, in order */
-  --step-1: #fbd5cd;
-  --step-2: #fbe7b4;
-  --step-3: #d9eed2;
-  --step-4: #d8e4fb;
-  --step-5: #e6dcfb;
-  --step-6: #fbd5d8;
-  --step-7: #d5eef0;
-  --step-8: #f6e0c4;
-  --step-9: #e2e8d0;
-  --step-10: #f3d9e8;
-  --step-11: #dfe6f6;
+  --step-1: #dcaeb3;
+  --step-2: #ddd6b0;
+  --step-3: #c2c7ac;
+  --step-4: #e3beb9;
+  --step-5: #e8c9cd;
+  --step-6: #cfc48e;
+  --step-7: #d1d4c0;
+  --step-8: #dbaca6;
+  --step-9: #eed7da;
+  --step-10: #eee8cc;
+  --step-11: #d9dbcb;
 
-  /* Warm browns, used see-through for shadows and thin lines */
-  --tan-rgb: 180 120 70;
-  --clay-rgb: 170 110 60;
-  --umber-rgb: 120 80 40;
-  --rust-rgb: 120 60 20;
-  --bark-rgb: 90 50 20;
-  --earth-rgb: 60 40 20;
+  /* Warm rosy browns, used see-through for shadows and thin lines */
+  --tan-rgb: 160 110 100;
+  --clay-rgb: 150 90 85;
+  --umber-rgb: 110 70 60;
+  --rust-rgb: 120 50 55;
+  --bark-rgb: 80 45 45;
+  --earth-rgb: 50 40 35;
 
   /* Soft background glows */
-  --glow-cream-rgb: 255 244 225;
-  --glow-peach-rgb: 253 226 206;
-  --glow-apricot-rgb: 251 206 170;
-  --glow-yellow-rgb: 249 228 170;
-  --glow-green-rgb: 214 232 200;
+  --glow-cream-rgb: 250 243 230;
+  --glow-peach-rgb: 236 205 200;
+  --glow-apricot-rgb: 225 175 168;
+  --glow-yellow-rgb: 228 220 180;
+  --glow-green-rgb: 205 210 175;
 
   /* ---- Colours used from the JavaScript files ---- */
 
   /* Front-page project cards: soft gradient from → to.
      The "-to" colour is also the tilted card behind the photo on that project's page. */
-  --card-relesys-from: #fde3d0;
-  --card-relesys-to: #f9cdb0;
-  --card-thesis-from: #fdf6d2;
+  --card-relesys-from: #f3e0dd;
+  --card-relesys-to: #e6bcb6;
+  --card-thesis-from: #f2eedb;
   /* Internal Communication app */
-  --card-thesis-to: #f9e9a6;
-  --card-spyrun-from: #e3f1dc;
-  --card-spyrun-to: #cfe6c6;
-  --card-pandas-from: #d8ecf6;
-  --card-pandas-to: #b9dcf0;
-  --card-study-card-from: #ece4fb;
+  --card-thesis-to: #e2dab0;
+  --card-spyrun-from: #e3e5d3;
+  --card-spyrun-to: #c9cdab;
+  --card-pandas-from: #f1dcde;
+  --card-pandas-to: #e0b5ba;
+  --card-study-card-from: #e6dfbd;
+  ;
   /* Digital Study Card */
-  --card-study-card-to: #d9cbf5;
-  --card-vr-driving-from: #FF9999;
+  --card-study-card-to: #cfc48e;
+  --card-vr-driving-from: #d59a8a;
   /* VR Driving Simulator */
-  --card-vr-driving-to: #FF9999;
-  --card-exhibit-from: #efe7df;
+  --card-vr-driving-to: #cc8980;
+  --card-exhibit-from: #efebe0;
   /* Interactive Exhibit */
-  --card-exhibit-to: #d9ccbf;
-  --card-maze-chase-from: #94E5EE;
-  --card-maze-chase-to: #AEECF3;
-  --card-decibel-from: #7BBA92;
+  --card-exhibit-to: #ddd5bd;
+  --card-maze-chase-from: #9fa66b;
+  --card-maze-chase-to: #b0b585;
+  --card-decibel-from: #d79aa0;
   /* Dangers of Decibel */
   --card-decibel-to: #8CC9A2;
+  --card-decibel-to: #c97880;
 
   /* Marquee role colours, in the order of the roles */
-  --marquee-1: #c0612b;
-  --marquee-2: #6f8a3a;
-  --marquee-3: #b04a6a;
-  --marquee-4: #4f6fa8;
-  --marquee-5: #8a5bb0;
+  --marquee-1: #b24a55;
+  --marquee-2: #666f2e;
+  --marquee-3: #a8645b;
+  --marquee-4: #8a7f3e;
+  --marquee-5: #7d3540;
 
   /* Info page */
-  --tint-portrait: #f6d3c8;
+  --tint-portrait: #cc8980;
   /* card behind your photo */
-  --edu-master: #f0a060;
+  --edu-master: #b24a55;
   /* education dots */
-  --edu-bachelor: #a3b98a;
-  --skill-design: #f8d6d1;
+  --edu-bachelor: #666f2e;
+  --skill-design: #e3beb9;
   /* skill group icon circles */
-  --skill-research: #fbe6ae;
-  --skill-tools: #d6e3fa;
-  --skill-methods: #dfe8d3;
+  --skill-research: #ddd6b0;
+  --skill-tools: #dcaeb3;
+  --skill-methods: #c2c7ac;
+
 
   /* Layout and fonts */
   --gutter: 45px;
@@ -276,7 +283,7 @@ button {
   font-weight: 400;
   white-space: nowrap;
   color: var(--muted);
-  background: linear-gradient(90deg, var(--peach-deep) 0%, var(--peach-light) 100%);
+  background: linear-gradient(90deg, #ffe6a8 0%, #fbcddd 100%);
 
 }
 
@@ -2945,9 +2952,9 @@ body {
   }
 
   .track__item {
-  justify-items: center;
-  padding: 0 8px;
-  text-align: center;
+    justify-items: center;
+    padding: 0 8px;
+    text-align: center;
   }
 }
 
