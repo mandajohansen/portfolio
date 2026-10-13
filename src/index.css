@@ -77,17 +77,17 @@
   --placeholder-2: #e9e4cf;
 
   /* Numbered step circles, in order */
-  --step-1: #dcaeb3;
-  --step-2: #ddd6b0;
-  --step-3: #c2c7ac;
-  --step-4: #e3beb9;
-  --step-5: #e8c9cd;
-  --step-6: #cfc48e;
-  --step-7: #d1d4c0;
-  --step-8: #dbaca6;
-  --step-9: #eed7da;
-  --step-10: #eee8cc;
-  --step-11: #d9dbcb;
+  --step-1: #fbd5cd;
+  --step-2: #fbe7b4;
+  --step-3: #d9eed2;
+  --step-4: #d8e4fb;
+  --step-5: #e6dcfb;
+  --step-6: #fbd5d8;
+  --step-7: #d5eef0;
+  --step-8: #f6e0c4;
+  --step-9: #e2e8d0;
+  --step-10: #f3d9e8;
+  --step-11: #dfe6f6;
 
   /* Warm rosy browns, used see-through for shadows and thin lines */
   --tan-rgb: 160 110 100;
