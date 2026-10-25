@@ -7,8 +7,7 @@
 //        --card-...-from / --card-...-to at the top of src/index.css.
 // link:  where the arrow button goes (case study URL, PDF, etc.).
 // summary: one line under the title: what it is, who it was for, one result.
-// wide:  the card spans the full width of the grid.
-// more:  shown as a line in the "More projects" list instead of as a card.
+// wide:  the card sits full width above the other project cards.
 
 export const experience = [
   {
@@ -45,16 +44,6 @@ export const projects = [
   },
 
   {
-    title: 'Pandas Fonologiske Lege',
-    subtitle: 'Bachelors Project',
-    summary: 'Phonological awareness training for kindergarten children, tested with real users',
-    tag: 'Ipad Game',
-    image: 'images/pandascard.png',
-    bg: 'linear-gradient(160deg, var(--card-pandas-from) 0%, var(--card-pandas-to) 100%)',
-    link: '#pandas-fonologiske-lege',
-    more: true,
-  },
-  {
     title: 'Digital Study Card',
     subtitle: 'Semester Project',
     summary: 'The university study card as an app · 235 survey responses · 6/6 preferred it',
@@ -63,45 +52,45 @@ export const projects = [
     bg: 'linear-gradient(160deg, var(--card-study-card-from) 0%, var(--card-study-card-to) 100%)',
     link: '#digital-study-card',
   },
+];
+
+// The "More projects" list under the cards: one line each, no picture.
+// type: the small orange line under the title.
+export const moreProjects = [
   {
     title: 'VR Driving Simulator',
-    subtitle: 'Semester Project',
-    summary: 'Interactive traffic scenarios for driving theory students · SUS 77.5 · Published at ICISS’24',
-    tag: 'VR Simulator',
-    image: 'images/drivingcard.png',
-    bg: 'linear-gradient(160deg, var(--card-vr-driving-from) 0%, var(--card-vr-driving-to) 100%)',
+    type: 'VR learning tool · Published at ICISS’24',
+    summary: 'Interactive traffic scenarios for driving theory students · SUS 77.5',
+    bg: 'linear-gradient(160deg, var(--card-vr-driving-from) 0%, var(--card-vr-driving-to) 100%)', // tilted card on the project page
     link: '#vr-driving-simulator',
-    more: true,
+  },
+  {
+    title: 'Pandas Fonologiske Lege',
+    type: 'Tablet game · Bachelor’s Project',
+    summary: 'Phonological awareness training for kindergarten children, tested with real users',
+    bg: 'linear-gradient(160deg, var(--card-pandas-from) 0%, var(--card-pandas-to) 100%)', // tilted card on the project page
+    link: '#pandas-fonologiske-lege',
   },
   {
     title: 'Interactive Exhibit',
-    subtitle: 'Semester Project',
+    type: 'Museum installation · Semester Project',
     summary: 'A social, physical-digital exhibit at Thorvaldsens Museum · 23 visitors tested it',
-    tag: 'AR Experience',
-    image: 'images/thorcard.png',
-    bg: 'linear-gradient(160deg, var(--card-exhibit-from) 0%, var(--card-exhibit-to) 100%)',
+    bg: 'linear-gradient(160deg, var(--card-exhibit-from) 0%, var(--card-exhibit-to) 100%)', // tilted card on the project page
     link: '#interactive-exhibit',
-    more: true,
   },
   {
     title: 'Maze Chase',
-    subtitle: 'Semester Project',
+    type: 'Multiplayer VR game · Semester Project',
     summary: 'Dynamic difficulty that balances players through the environment · 24 players',
-    tag: 'VR Game',
-    image: 'images/mazecard.png',
-    bg: 'linear-gradient(160deg, var(--card-maze-chase-from) 0%, var(--card-maze-chase-to) 100%)',
+    bg: 'linear-gradient(160deg, var(--card-maze-chase-from) 0%, var(--card-maze-chase-to) 100%)', // tilted card on the project page
     link: '#maze-chase',
-    more: true,
   },
   {
     title: 'Dangers of Decibel',
-    subtitle: 'Semester Project',
+    type: 'VR health experience · Semester Project',
     summary: 'Making hearing risk feel real · knowledge rose 4.6 points in the VR group',
-    tag: 'VR Experience',
-    image: 'images/dangerscard.png',
-    bg: 'linear-gradient(160deg, var(--card-decibel-from) 0%, var(--card-decibel-to) 100%)',
+    bg: 'linear-gradient(160deg, var(--card-decibel-from) 0%, var(--card-decibel-to) 100%)', // tilted card on the project page
     link: '#dangers-of-decibel',
-    more: true,
   },
 ];
 

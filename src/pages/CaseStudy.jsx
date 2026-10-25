@@ -2,7 +2,7 @@ import { Fragment, useMemo } from 'react';
 import Arrow from '../components/Arrow.jsx';
 import Icon from '../components/Icon.jsx';
 import SideNav from '../components/SideNav.jsx';
-import { experience, projects } from '../data/projects.js';
+import { experience, moreProjects, projects } from '../data/projects.js';
 
 // Renders one case study from src/data/caseStudies.js.
 // Every section is a list of blocks; each block `type` maps to a component below.
@@ -101,7 +101,7 @@ function Underlined({ text }) {
 
 // The tilted card behind the hero image uses the colour of the project's card on the front page.
 function tintFor(slug) {
-  const card = [...experience, ...projects].find((p) => p.link === `#${slug}`);
+  const card = [...experience, ...projects, ...moreProjects].find((p) => p.link === `#${slug}`);
   const colours = card?.bg.match(/#[0-9a-f]{6}|var\(--[\w-]+\)/gi);
   return colours ? colours[colours.length - 1] : 'var(--tint-portrait)';
 }
