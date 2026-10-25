@@ -1,6 +1,6 @@
 import Arrow from './Arrow.jsx';
 
-export default function ProjectCard({ title, subtitle, tag, image, bg, link, wide = false }) {
+export default function ProjectCard({ title, subtitle, summary, tag, image, bg, link, wide = false }) {
   return (
     <a className={`card ${wide ? 'card--wide' : ''}`} href={link} style={{ background: bg }}>
       {image && <img className="card__image" src={image} alt="" loading="lazy" />}
