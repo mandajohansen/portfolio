@@ -389,19 +389,15 @@ button {
   color: var(--ink);
 }
 
-.grid .card--wide {
-  grid-column: 1 / -1;
-}
-
 .card__footer {
   position: absolute;
   inset: auto 0 0;
-  min-height: 136px;
+  height: 136px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 16px;
-  padding: 18px 26px;
+  padding: 0 26px;
   background: rgb(var(--white-rgb) / 0.6);
   backdrop-filter: blur(22px) saturate(1.1);
   -webkit-backdrop-filter: blur(22px) saturate(1.1);
@@ -420,57 +416,6 @@ button {
   font-size: 19px;
 }
 
-.card__summary {
-  margin-top: 8px;
-  font-size: 15px;
-  line-height: 1.45;
-  color: var(--muted);
-}
-
-/* "More projects": one line per project under the card grid */
-
-.more {
-  margin-top: 70px;
-}
-
-.more__title {
-  font-family: var(--serif);
-  font-weight: 700;
-  font-size: 23px;
-}
-
-.more__list {
-  margin: 18px 0 0;
-  padding: 0;
-  list-style: none;
-  border-top: 1px solid rgb(var(--black-rgb) / 0.15);
-}
-
-.more__item {
-  display: grid;
-  grid-template-columns: minmax(180px, 1fr) 2fr auto;
-  align-items: center;
-  gap: 24px;
-  padding: 20px 4px;
-  border-bottom: 1px solid rgb(var(--black-rgb) / 0.15);
-  transition: color 0.2s;
-}
-
-.more__item:hover {
-  color: var(--accent);
-}
-
-.more__name {
-  font-family: var(--serif);
-  font-size: 19px;
-}
-
-.more__summary {
-  font-size: 15px;
-  line-height: 1.45;
-  color: var(--muted);
-}
-
 .card__button {
   flex: none;
   display: grid;
@@ -486,6 +431,128 @@ button {
 .card:hover .card__button {
   background: var(--ink);
   color: var(--white);
+}
+
+/* Footer grows with the summary line instead of clipping it */
+.card__footer {
+  height: auto;
+  min-height: 136px;
+  padding-block: 20px;
+}
+
+.card__summary {
+  margin-top: 8px;
+  font-size: 15px;
+  line-height: 1.45;
+  color: var(--muted);
+}
+
+/* Space between the wide featured card and the two cards under it */
+.work .card--wide + .grid {
+  margin-top: 40px;
+}
+
+.more-projects {
+  margin-top: 64px;
+}
+
+.more-projects__title {
+  margin-bottom: 12px;
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: 26px;
+}
+
+.more-projects__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid rgb(var(--black-rgb) / 0.1);
+}
+
+.more-projects__item {
+  display: grid;
+  grid-template-columns: minmax(180px, 1fr) minmax(0, 2.4fr) auto;
+  grid-template-areas:
+    'name summary arrow'
+    'type summary arrow';
+  column-gap: 32px;
+  row-gap: 2px;
+  align-items: center;
+  padding: 20px 4px;
+  border-bottom: 1px solid rgb(var(--black-rgb) / 0.1);
+  transition: background 0.2s;
+}
+
+.more-projects__name {
+  grid-area: name;
+  font-family: var(--serif);
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.more-projects__type {
+  grid-area: type;
+  font-size: 13px;
+  color: var(--accent);
+}
+
+.more-projects__summary {
+  grid-area: summary;
+  font-size: 15px;
+  line-height: 1.45;
+  color: var(--muted);
+}
+
+.more-projects__arrow {
+  grid-area: arrow;
+  display: grid;
+  place-items: center;
+  transition: transform 0.2s, color 0.2s;
+}
+
+@media (hover: hover) {
+  .more-projects__item:hover {
+    background: rgb(var(--white-rgb) / 0.5);
+  }
+
+  .more-projects__item:hover .more-projects__arrow {
+    color: var(--accent);
+    transform: translateX(4px);
+  }
+}
+
+@media (max-width: 860px) {
+  .card__footer {
+    min-height: 100px;
+    padding-block: 16px;
+  }
+
+  .card__summary {
+    font-size: 13px;
+  }
+
+  .work .card--wide + .grid {
+    margin-top: 24px;
+  }
+
+  .more-projects {
+    margin-top: 48px;
+  }
+
+  .more-projects__item {
+    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-areas:
+      'name arrow'
+      'type arrow'
+      'summary arrow';
+    column-gap: 16px;
+  }
+
+  .more-projects__summary {
+    margin-top: 6px;
+    font-size: 14px;
+  }
 }
 
 /* ---------- Responsive ---------- */
@@ -533,26 +600,7 @@ button {
   }
 
   .card__footer {
-    min-height: 100px;
-    padding: 14px 18px;
-  }
-
-  .card__summary {
-    font-size: 13px;
-  }
-
-  .more__item {
-    grid-template-columns: 1fr auto;
-    gap: 6px 16px;
-  }
-
-  .more__summary {
-    grid-column: 1;
-  }
-
-  .more__item svg {
-    grid-column: 2;
-    grid-row: 1 / span 2;
+    padding-inline: 18px;
   }
 
   .card__tag {

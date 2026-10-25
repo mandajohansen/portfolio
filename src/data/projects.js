@@ -85,7 +85,7 @@ export const projects = [
   },
   {
     title: 'Maze Chase',
-    subtitle: 'Research Project',
+    subtitle: 'Semester Project',
     summary: 'Dynamic difficulty that balances players through the environment · 24 players',
     tag: 'VR Game',
     image: 'images/mazecard.png',

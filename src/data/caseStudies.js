@@ -2709,7 +2709,7 @@ export const caseStudies = {
         title: 'Methods',
         text: 'Dynamic Difficulty Adjustment, Flow Short Scale, experimental comparison, statistical analysis',
       },
-      { icon: 'pin', title: 'Context', text: 'Multiplayer VR game, three-person group, 7th semester research project, 2025' },
+      { icon: 'pin', title: 'Context', text: 'Multiplayer VR game, three-person group, 7th Semester Project, 2025' },
     ],
 
     sections: [
