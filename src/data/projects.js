@@ -6,11 +6,15 @@
 // bg:    the soft background colour behind the image. The colours are set as
 //        --card-...-from / --card-...-to at the top of src/index.css.
 // link:  where the arrow button goes (case study URL, PDF, etc.).
+// summary: one line under the title: what it is, who it was for, one result.
+// wide:  the card spans the full width of the grid.
+// more:  shown as a line in the "More projects" list instead of as a card.
 
 export const experience = [
   {
     title: 'Digital Design Intern',
     subtitle: 'Relesys A/S',
+    summary: 'Branded mobile apps for frontline staff across many brands · prototypes in 2–3 days',
     tag: 'Mobile applications',
     image: 'images/Relesyscard.png',
     bg: 'linear-gradient(135deg, var(--card-relesys-from) 0%, var(--card-relesys-to) 100%)',
@@ -27,12 +31,13 @@ export const projects = [
     image: 'images/Thesiscard.png',
     bg: 'linear-gradient(160deg, var(--card-thesis-from) 0%, var(--card-thesis-to) 100%)',
     link: '#internal-communication',
+    wide: true,
   },
 
   {
     title: 'SpyRun',
     subtitle: 'Semester Project',
-    summary: 'Auditory training game for children with APD · SUS 82.73 · Published with Materiale Centeret',
+    summary: 'Published app · Auditory training game for children with APD · SUS 82.73',
     tag: 'Mobile Game',
     image: 'images/spyruncard.png',
     bg: 'linear-gradient(160deg, var(--card-spyrun-from) 0%, var(--card-spyrun-to) 100%)',
@@ -47,6 +52,7 @@ export const projects = [
     image: 'images/pandascard.png',
     bg: 'linear-gradient(160deg, var(--card-pandas-from) 0%, var(--card-pandas-to) 100%)',
     link: '#pandas-fonologiske-lege',
+    more: true,
   },
   {
     title: 'Digital Study Card',
@@ -60,11 +66,12 @@ export const projects = [
   {
     title: 'VR Driving Simulator',
     subtitle: 'Semester Project',
-    summary: 'Interactive traffic scenarios for driving theory students · SUS 77.5',
+    summary: 'Interactive traffic scenarios for driving theory students · SUS 77.5 · Published at ICISS’24',
     tag: 'VR Simulator',
     image: 'images/drivingcard.png',
     bg: 'linear-gradient(160deg, var(--card-vr-driving-from) 0%, var(--card-vr-driving-to) 100%)',
     link: '#vr-driving-simulator',
+    more: true,
   },
   {
     title: 'Interactive Exhibit',
@@ -74,6 +81,7 @@ export const projects = [
     image: 'images/thorcard.png',
     bg: 'linear-gradient(160deg, var(--card-exhibit-from) 0%, var(--card-exhibit-to) 100%)',
     link: '#interactive-exhibit',
+    more: true,
   },
   {
     title: 'Maze Chase',
@@ -83,6 +91,7 @@ export const projects = [
     image: 'images/mazecard.png',
     bg: 'linear-gradient(160deg, var(--card-maze-chase-from) 0%, var(--card-maze-chase-to) 100%)',
     link: '#maze-chase',
+    more: true,
   },
   {
     title: 'Dangers of Decibel',
@@ -92,6 +101,7 @@ export const projects = [
     image: 'images/dangerscard.png',
     bg: 'linear-gradient(160deg, var(--card-decibel-from) 0%, var(--card-decibel-to) 100%)',
     link: '#dangers-of-decibel',
+    more: true,
   },
 ];
 

@@ -982,6 +982,11 @@ export const caseStudies = {
               'Iterated the interface across three design cycles.',
             ],
           },
+          {
+            type: 'highlight',
+            label: 'Project coordination',
+            text: 'We planned and split the work using Scrum and agile methods. I took the main responsibility for leading that process, making sure we covered everything and stayed on track with our plans.',
+          },
         ],
       },
       {
@@ -1314,7 +1319,7 @@ export const caseStudies = {
         title: 'Methods',
         text: 'Interviews, surveys, UMUX, SUS, IPQ, observation, expert evaluation',
       },
-      { icon: 'pin', title: 'Context', text: 'VR learning tool, four-person group, 5th Semester Project, 2023' },
+      { icon: 'pin', title: 'Context', text: 'VR learning tool, four-person group, 5th Semester Project, 2023. Published at ICISS’24' },
     ],
 
     sections: [
@@ -1793,7 +1798,7 @@ export const caseStudies = {
         title: 'Methods',
         text: 'Interviews, surveys, think-aloud, SUS, expert evaluation',
       },
-      { icon: 'pin', title: 'Context', text: 'Mobile game, five-person group, 4th Semester Project, 2023' },
+      { icon: 'pin', title: 'Context', text: 'Mobile game, five-person group, 4th Semester Project, 2023. Published with Materiale Centeret' },
     ],
 
     sections: [
@@ -3691,7 +3696,7 @@ export const caseStudies = {
       {
         icon: 'user',
         title: 'Role',
-        text: 'UX/UI Design, Rapid Prototyping, Brand Translation, Front-End Implementation, Visual Design, Accesibility, Interaction Design, Responsive Design',
+        text: 'UX/UI Design, Rapid Prototyping, Brand Translation, Front-End Implementation, Visual Design, Accessibility, Interaction Design, Responsive Design',
       },
       { icon: 'tools', title: 'Tools', text: 'Figma, CSS, LESS, HTML, Jira, CMS' },
       {
@@ -3699,7 +3704,7 @@ export const caseStudies = {
         title: 'Collaboration',
         text: 'Senior Designers, Client Success, Implementation, Solution Engineering, Sales',
       },
-      { icon: 'pin', title: 'Context', text: 'Intership, Digital Designer, Relesys A/S, Fall 2025' },
+      { icon: 'pin', title: 'Context', text: 'Internship, Digital Designer, Relesys A/S, Fall 2025' },
     ],
 
     sections: [
@@ -3850,6 +3855,7 @@ export const caseStudies = {
             type: 'text',
             body: [
               'Projects typically began with requirements from client-facing teams describing functionality, modules, brand priorities, and implementation needs.',
+              'Requests came in from several teams, so I read them through and prioritised them by their deadlines.',
               'I translated these inputs into a focused design direction before moving into visual exploration.',
             ],
           },
