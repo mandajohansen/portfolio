@@ -94,10 +94,9 @@ export const moreProjects = [
   },
 ];
 
+// The scrolling strip under the front-page hero. Keep it to the roles in the hero.
 export const roles = [
   'UX/UI Designer',
-  'Digital Designer',
-  'Interaction Designer',
-  'Project Coordinator',
   'Product Designer',
+  'Project Coordinator',
 ];

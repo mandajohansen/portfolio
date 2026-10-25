@@ -435,20 +435,25 @@ export const caseStudies = {
             items: [
               { value: '79.4', text: 'SUS score across four participants: high perceived usability.' },
               { value: '5.44+ / 7', text: 'Every acceptance-scale dimension in the five-day field test. Communication apprehension: only 1.25.' },
+            ],
+          },
+          {
+            type: 'notes',
+            items: [
               {
-                value: 'User-informed',
+                title: 'Informed by users',
                 text: 'Key interface decisions were based on employee evaluation rather than designer assumptions.',
               },
               {
-                value: 'Fragmented → centralized',
-                text: 'Communication, knowledge, schedules, and handovers consolidated into one environment.',
+                title: 'From fragmented to centralized',
+                text: 'Communication, knowledge, schedules, and handovers were consolidated into one environment.',
               },
               {
-                value: 'Generic → role-relevant',
+                title: 'From generic to role-relevant',
                 text: 'Information could be adapted to employees’ responsibilities and everyday work.',
               },
               {
-                value: 'Memory → traceability',
+                title: 'From memory to traceability',
                 text: 'Important communication remained accessible beyond verbal exchanges.',
               },
             ],
@@ -4048,21 +4053,26 @@ export const caseStudies = {
                 value: '2–3 days',
                 text: 'Full prototype delivery time by the end of the role, compared with 1.5–2 weeks for my first prototype.',
               },
+            ],
+          },
+          {
+            type: 'notes',
+            items: [
               {
-                value: 'Design → code',
+                title: 'From design to code',
                 text: 'Took interface decisions from Figma into the live CMS environment.',
               },
               {
-                value: 'Multi-brand',
-                text: 'Designed across clients with different identities, industries, and requirements.',
+                title: 'Across many brands',
+                text: 'Designed for clients with different identities, industries, and requirements.',
               },
               {
-                value: 'Cross-functional',
-                text: 'Worked across Design, Client Success, Sales, Implementation, and Solution Engineering.',
+                title: 'Across teams',
+                text: 'Worked with Design, Client Success, Sales, Implementation, and Solution Engineering.',
               },
               {
-                value: 'Front-end',
-                text: 'Applied CSS, LESS, responsive design, flexbox, and existing HTML structures in production work.',
+                title: 'In production front-end',
+                text: 'Applied CSS, LESS, responsive design, flexbox, and existing HTML structures in live client work.',
               },
             ],
           },

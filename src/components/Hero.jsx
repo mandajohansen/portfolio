@@ -3,9 +3,10 @@ import Arrow from './Arrow.jsx';
 
 // Edit the text at the top of the front page here.
 const HERO = {
-  // The intro types out these words one after the other: "I'm a UX/UI designer|"
+  // The intro line: "I'm a UX/UI and product designer|". The first word shows straight away.
+  // Add more words to the list to have them typed out one after the other.
   typedPrefix: 'I’m a',
-  typed: ['UX/UI designer', 'User researcher', 'Digital Designer', 'Project coordinator', 'Product designer'],
+  typed: ['UX/UI and product designer'],
   // Set to null to hide the green "available" pill.
   status: 'Open to new opportunities',
   title: [
@@ -14,7 +15,7 @@ const HERO = {
     'products and experiences.',
   ],  // The job titles you're looking for, shown as bubbles under the headline.
   rolesLabel: 'Looking for roles as',
-  roles: ['UX/UI Designer', 'Product Designer', 'Digital Designer', 'Project Coordinator'],
+  roles: ['UX/UI Designer', 'Product Designer', 'Project Coordinator'],
 
   // Your photo on the right, with its sticker and spinning badge.
   photo: 'images/me.jpg',
@@ -22,14 +23,15 @@ const HERO = {
   badge: ' OPEN TO WORK • OPEN TO WORK • ',
 };
 
-// Types each word, pauses, deletes it and moves on to the next one.
+// Starts with the first word fully shown, pauses, deletes it and types the next one.
+// With a single word it simply stays put.
 function useTypewriter(words) {
-  const [text, setText] = useState('');
+  const [text, setText] = useState(words[0]);
   const [index, setIndex] = useState(0);
   const [deleting, setDeleting] = useState(false);
 
   useEffect(() => {
-    if (window.matchMedia?.('(prefers-reduced-motion: reduce)').matches) {
+    if (words.length < 2 || window.matchMedia?.('(prefers-reduced-motion: reduce)').matches) {
       setText(words[0]);
       return undefined;
     }

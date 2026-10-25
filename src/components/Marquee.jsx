@@ -8,7 +8,7 @@ const COLORS = ['var(--marquee-1)', 'var(--marquee-2)', 'var(--marquee-3)', 'var
 export default function Marquee() {
   // Repeat the list so the strip is always wider than the screen,
   // then render it twice for a seamless loop.
-  const line = Array(3).fill(roles).flat();
+  const line = Array(Math.ceil(15 / roles.length)).fill(roles).flat();
   return (
     <div className="marquee" aria-label={roles.join(', ')}>
       <div className="marquee__track" aria-hidden="true">
