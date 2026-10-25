@@ -3429,64 +3429,11 @@ body {
   transition-delay: calc(0.9s + var(--i) * 0.18s);
 }
 
-/* 2. On hover the card lifts, and the dot turns into a graduation cap
-      that gets tossed in the air. */
-.edu-card__dot {
-  position: relative;
-  display: grid;
-  place-items: center;
-  transition: transform 0.3s ease, background 0.3s ease;
-}
-
-.edu-card__cap {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  width: 26px;
-  height: 20px;
-  color: var(--edu-color, var(--accent));
-  opacity: 0;
-  transform: translate(-50%, -50%) scale(0.4);
-  pointer-events: none;
-}
-
+/* 2. On hover the card lifts. */
 .education__cards.is-visible .edu-card:hover {
   transform: translateY(-6px);
   transition-delay: 0s;
   box-shadow: 0 18px 40px rgb(var(--umber-rgb) / 0.12);
-}
-
-.edu-card:hover .edu-card__dot {
-  background: transparent !important;
-}
-
-.edu-card:hover .edu-card__cap {
-  animation: cap-toss 0.9s cubic-bezier(0.3, 0.7, 0.4, 1) forwards;
-}
-
-@keyframes cap-toss {
-  0% {
-    opacity: 1;
-    transform: translate(-50%, -50%) scale(0.5) rotate(0deg);
-  }
-
-  45% {
-    opacity: 1;
-    transform: translate(-50%, -190%) scale(1) rotate(-200deg);
-  }
-
-  75% {
-    transform: translate(-50%, -40%) scale(1) rotate(-350deg);
-  }
-
-  88% {
-    transform: translate(-50%, -62%) scale(1) rotate(-360deg);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translate(-50%, -50%) scale(1) rotate(-360deg);
-  }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -3496,12 +3443,6 @@ body {
     opacity: 1;
     transform: none;
     transition: none;
-  }
-
-  .edu-card:hover .edu-card__cap {
-    animation: none;
-    opacity: 1;
-    transform: translate(-50%, -50%) scale(1);
   }
 }
 

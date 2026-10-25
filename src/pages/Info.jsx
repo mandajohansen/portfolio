@@ -71,18 +71,6 @@ function useReveal() {
   return [ref, visible];
 }
 
-// Small graduation cap that is tossed in the air when you hover an education card.
-function Cap() {
-  return (
-    <svg className="edu-card__cap" viewBox="0 0 32 24" aria-hidden="true">
-      <path d="M16 2 1 9l15 7 15-7-15-7Z" fill="currentColor" />
-      <path d="M8 12.5V18c0 1.7 3.6 3 8 3s8-1.3 8-3v-5.5l-8 3.7-8-3.7Z" fill="currentColor" opacity="0.85" />
-      <path d="M28 10v7" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" />
-      <circle cx="28" cy="18" r="1.4" fill="currentColor" />
-    </svg>
-  );
-}
-
 export default function Info() {
   const [eduRef, eduVisible] = useReveal();
 
@@ -162,9 +150,7 @@ export default function Info() {
             <div ref={eduRef} className={`education__cards ${eduVisible ? 'is-visible' : ''}`}>
               {education.items.map((ed, i) => (
                 <div key={ed.degree} className="edu-card" style={{ '--i': i, '--edu-color': ed.color }}>
-                  <span className="edu-card__dot" style={{ background: ed.color }} aria-hidden="true">
-                    <Cap />
-                  </span>
+                  <span className="edu-card__dot" style={{ background: ed.color }} aria-hidden="true" />
                   <div>
                     <h3 className="edu-card__degree">{ed.degree}</h3>
                     <p className="edu-card__program">{ed.program}</p>
