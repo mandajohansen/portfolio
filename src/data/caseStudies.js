@@ -67,7 +67,7 @@ export const caseStudies = {
             items: [
               { title: 'Managers', text: 'Responsible for distributing information and coordinating communication.' },
               { title: 'Full-time employees & key holders', text: 'Work across multiple areas and require broad operational information.' },
-              { title: 'Part-time employees', text: 'Mainly wants information about upcoming shifts or operational information directly relevant to their next shift and role.' },
+              { title: 'Part-time employees', text: 'Mainly want information about upcoming shifts or operational information directly relevant to their next shift and role.' },
             ],
           },
           {
@@ -141,7 +141,7 @@ export const caseStudies = {
               'Conducted usability and real-world acceptance evaluations.',
             ],
             after:
-              'The final application included areas such as news, shift handovers, peer knowledge, a knowledge bank, schedules, chat, contacts and role-based content. **To create an all-in-one communication environment**',
+              'The final application included areas such as news, shift handovers, peer knowledge, a knowledge bank, schedules, chat, contacts and role-based content, **creating an all-in-one communication environment**.',
           },
                     {
             type: 'text',
@@ -347,17 +347,55 @@ export const caseStudies = {
             items: [
               {
                 title: 'Preference testing',
-                text: '11 employees evaluated alternative interface directions before the final design was selected.',
+                text: '11 of 15 invited employees from the same store, some of whom had also been interviewed, evaluated alternative interface directions before the final design was selected.',
               },
               {
                 title: 'Usability testing',
-                text: 'Employees completed realistic tasks while thinking aloud, followed by the System Usability Scale and interviews. Tasks included locating information, confirming must-read communication, creating posts, creating handovers and finding schedules.',
+                text: 'After a pilot test with three participants, four store employees (two managers, one full-time and one part-time) completed realistic, role-specific tasks while thinking aloud, followed by the System Usability Scale and interviews. Tasks included locating information, confirming must-read communication, creating posts, creating handovers and finding schedules.',
               },
               {
                 title: 'Field evaluation',
-                text: 'Participants used the application during a five-day test period. Diary entries, interviews and the Digital Communication Acceptance Scale were used to understand how the system might fit into everyday work.',
+                text: 'Five employees (three managers, one full-time and one part-time) used the application for five days on Android phones I provided. Diary entries, interviews and the Digital Communication Acceptance Scale were used to understand how the system might fit into everyday work.',
               },
             ],
+          },
+          {
+            type: 'text',
+            body: 'The pilot test uncovered a few design issues. I fixed some and deliberately kept others:',
+          },
+          {
+            type: 'insights',
+            labels: { insight: 'Finding', decision: 'Decision' },
+            items: [
+              {
+                title: 'Schedule',
+                insight: 'Swiping to see other days was not obvious.',
+                decision: 'Added a clearer indication that the schedule could be swiped.',
+                why: 'The interaction needed to be visible without explanation.',
+              },
+              {
+                title: 'Handover form',
+                insight: 'Some selectable options in one subsection did not make sense.',
+                decision: 'Revised the options in that subsection.',
+                why: 'Handovers were a key feature and needed to be quick to fill in correctly.',
+              },
+              {
+                title: 'Black action buttons',
+                insight: 'The create-post button was easy to miss, as participants mostly noticed the colourful components.',
+                decision: 'Kept the buttons black.',
+                why: 'It kept the interaction buttons consistent with the overall visual design.',
+              },
+              {
+                title: 'Must Read',
+                insight: 'Must Read looked like a tag on posts, but was a separate toggle when creating a post.',
+                decision: 'Kept it as a toggle.',
+                why: 'Must Read works as a separate priority level, not as one of the tags.',
+              },
+            ],
+          },
+          {
+            type: 'text',
+            body: 'The pilot also showed that some test tasks did not fit every role, so I adjusted the test so each participant saw the design and tasks for their own role.',
           },
           {
             type: 'flow',
@@ -386,8 +424,8 @@ export const caseStudies = {
           {
             type: 'text',
             body: [
-              'The final prototype achieved a System Usability Scale score of 79.4, placing it approximately in the 85th–89th percentile compared with the referenced benchmark.',
-              'The acceptance evaluation also showed high scores across the dimensions of the Digital Internal Communication Acceptance Scale, with users reporting  **low communication apprehension and positive perceptions of interaction facilitation** ',
+              'Across the four usability test participants, the final prototype achieved a System Usability Scale score of 79.4 (individual scores 85, 77.5, 77.5 and 77.5), against a benchmark average of 68. That places it approximately in the 85th–89th percentile.',
+              'In the field test, every dimension of the Digital Internal Communication Acceptance Scale scored **5.44 or higher out of 7**. Interaction facilitation scored 6.06, while communication apprehension was only 1.25, meaning users felt **comfortable communicating through the app**.',
               'Participants also recognized the product as addressing issues identified during the initial research, with **shift handovers receiving particularly strong support**.',
             ],
           },
@@ -395,7 +433,8 @@ export const caseStudies = {
           {
             type: 'metrics',
             items: [
-              { value: '79.4', text: 'SUS score: high perceived usability.' },
+              { value: '79.4', text: 'SUS score across four participants: high perceived usability.' },
+              { value: '5.44+ / 7', text: 'Every acceptance-scale dimension in the five-day field test. Communication apprehension: only 1.25.' },
               {
                 value: 'User-informed',
                 text: 'Key interface decisions were based on employee evaluation rather than designer assumptions.',
@@ -412,6 +451,14 @@ export const caseStudies = {
                 value: 'Memory → traceability',
                 text: 'Important communication remained accessible beyond verbal exchanges.',
               },
+            ],
+          },
+          { type: 'subheading', title: 'Limitations', image: null, caption: '' },
+          {
+            type: 'text',
+            body: [
+              'The usability test had four participants and the pilot three, recruited through convenience sampling. Everyone came from one store or the university. The results point in a clear direction, but the sample is too small to generalise from.',
+              'The field test had its own limits: the Android phones were borrowed and stayed in the store, so the app was only used during shifts, and participants wrote only one event-based diary entry.',
             ],
           },
         ],
@@ -970,6 +1017,7 @@ export const caseStudies = {
             type: 'text',
             body: [
               'As part of a seven-person team, I contributed across **research, product definition, interaction design, prototyping, and usability evaluation**.',
+              'We worked closely together and sparred on ideas, but **I designed a large part of the app in Figma** and took on much of the test preparation and running the tests.',
             ],
             list: [
               'Investigated student needs through interviews, survey research, and a focus group;',
@@ -979,7 +1027,7 @@ export const caseStudies = {
               'Contributed to the interactive implementation;',
               'Conducted think-aloud and task-based usability testing;',
               'Analysed qualitative and quantitative usability findings;',
-              'Iterated the interface across three design cycles.',
+              'Developed the interface over three versions, with two rounds of user testing.',
             ],
           },
           {
@@ -1256,6 +1304,7 @@ export const caseStudies = {
             body: [
               'The second iteration showed a measurable improvement in navigation efficiency. In the first iteration, only one participant consistently reached the optimal click count across tasks. In the second iteration, 4 out of 6 participants achieved the optimal number of clicks across the first five tasks, suggesting improved efficiency after the redesign.',
               'The PSSUQ evaluation was also positive. The average score for system usefulness was 6.28/7, while the information and interface categories also averaged above 6. The sample of six participants was too small to treat these numbers as representative of the whole student population.',
+              'The final test also gave a **mean SUS score of 88.52**, well above the average of 68 in Sauro’s benchmark and above the 97th percentile. The 95% confidence interval was 82.94 to 94.10, so even its lower end is well above average, although the small sample may not represent all students.',
               'The interviews supported those findings: participants commonly described the application as easy, fast and straightforward, and users recognised familiar navigation and visual patterns from other mobile applications.',
               'Perhaps the most meaningful product result was this:',
             ],
@@ -1274,12 +1323,16 @@ export const caseStudies = {
             items: [
               { value: '235', text: 'Survey responses. A larger quantitative study helped validate early interview findings.' },
               {
-                value: '3 iterations',
-                text: 'Research → test → improve → test again. The design evolved based on observed user behaviour rather than only visual preference.',
+                value: '2 test rounds',
+                text: 'Prototype → test → revise → test again → final design. The design evolved based on observed user behaviour rather than only visual preference.',
               },
               {
                 value: '4/6',
                 text: 'Reached optimal task efficiency across the first five tasks in the second iteration.',
+              },
+              {
+                value: '88.52',
+                text: 'Mean SUS score in the final test, against an average of 68. 95% confidence interval: 82.94 to 94.10.',
               },
               {
                 value: '6.28 / 7',
@@ -1876,6 +1929,7 @@ export const caseStudies = {
             type: 'text',
             body: [
               'As part of a five-person team, I contributed across **research, game UX, interaction design, accessibility, implementation, and evaluation**.',
+              '**I was primarily responsible for the UX.** I designed the layout and visibility of the interface in Figma, building on free assets, led the communication with stakeholders, and prepared and ran the tests.',
             ],
             list: [
               'Researched APD and existing auditory-training approaches;',
@@ -2146,7 +2200,7 @@ export const caseStudies = {
             items: [
               {
                 value: '82.73',
-                text: 'Mean SUS score in the general usability evaluation.',
+                text: 'Mean SUS score from 11 participants in the general usability evaluation.',
               },
               {
                 value: '10 / 11',
@@ -2211,11 +2265,6 @@ export const caseStudies = {
           },
 
           {
-            type: 'quote',
-            text: 'Difficulty should come from the auditory skill being trained, not from ambiguity in the interface or interaction.',
-          },
-
-          {
             type: 'subheading',
             title: 'Limitations',
             image: null,
@@ -2227,6 +2276,16 @@ export const caseStudies = {
               'The prototype was not evaluated as a clinical intervention and cannot be claimed to improve auditory processing.',
               'Only two children with APD participated, and testing was short-term. A longer longitudinal study with a larger target-group sample would be required to evaluate training effectiveness.',
             ],
+          },
+          {
+            type: 'subheading',
+            title: 'From prototype to published app',
+            image: null,
+            caption: '',
+          },
+          {
+            type: 'text',
+            body: 'The audiology specialist who advised us on APD introduced us to **Materiale Centeret**, an organisation that publishes games for children with hearing disabilities. They liked the game, and we handed the application over to them to publish.',
           },
         ],
       },
@@ -3687,7 +3746,7 @@ export const caseStudies = {
     ],
 
     notice:
-      'Due to confidentiality agreements, client-specific mockups and unreleased designs cannot be shown. This case study therefore focuses on representative challenges, design decisions, and implementation patterns.',
+      'Due to confidentiality agreements, client-specific mockups and unreleased designs cannot be shown. The apps on the cover image are already public. This case study therefore focuses on representative challenges, design decisions, and implementation patterns.',
 
     heroImage: 'images/Relesyscard.png',
     heroNote: 'Selected client work confidential',
@@ -3696,7 +3755,7 @@ export const caseStudies = {
       {
         icon: 'user',
         title: 'Role',
-        text: 'UX/UI Design, Rapid Prototyping, Brand Translation, Front-End Implementation, Visual Design, Accessibility, Interaction Design, Responsive Design',
+        text: 'Digital Design Intern',
       },
       { icon: 'tools', title: 'Tools', text: 'Figma, CSS, LESS, HTML, Jira, CMS' },
       {
