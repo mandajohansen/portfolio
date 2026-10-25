@@ -9,6 +9,7 @@ export default function ProjectCard({ title, subtitle, tag, image, bg, link, wid
         <div>
           <h3 className="card__title">{title}</h3>
           <p className="card__subtitle">{subtitle}</p>
+          {summary && <p className="card__summary">{summary}</p>}
         </div>
         <span className="card__button" aria-hidden="true">
           <Arrow direction="up-right" size={22} />

@@ -143,6 +143,24 @@ export const caseStudies = {
             after:
               'The final application included areas such as news, shift handovers, peer knowledge, a knowledge bank, schedules, chat, contacts and role-based content. **To create an all-in-one communication environment**',
           },
+                    {
+            type: 'text',
+            body: [
+              '**I planned and managed the project timeline myself** using a Gantt chart, from defining the problem in February to the final deadline on 26 May 2026.',
+              'The phases overlapped on purpose, so research, design and evaluation could feed into each other while the report was written throughout.',
+            ],
+          },
+          {
+            type: 'stages',
+            items: [
+              { title: 'Project foundation', meta: '3 – 23 Feb', text: 'Topic, users, use cases, problem statement and project scope.' },
+              { title: 'State of the art', meta: '10 Feb – 16 Mar', text: 'Literature review, prior work and open research gaps.' },
+              { title: 'Methodology', meta: '24 Feb – 16 Mar', text: 'Choice of methods and an evaluation plan.' },
+              { title: 'Design & prototyping', meta: '10 Mar – 20 Apr', text: 'Low- to high-fidelity prototypes, tested early and refined.' },
+              { title: 'Implementation', meta: '31 Mar – 4 May', text: 'Final prototype built and documented.' },
+              { title: 'Evaluation & discussion', meta: '14 Apr – 23 May', text: 'User studies, analysis, limitations and future work.' },
+            ],
+          },
         ],
       },
       {
@@ -221,7 +239,7 @@ export const caseStudies = {
               },
               {
                 title: 'C - Content-first',
-                text: 'A social-feed-inspired experience emphasizing the latest updates across differnet pages.',
+                text: 'A social-feed-inspired experience emphasizing the latest updates across different pages.',
                 image: 'images/designc.png',
               },
             ],
