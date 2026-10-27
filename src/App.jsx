@@ -22,6 +22,11 @@ export default function App() {
     const onHash = () => {
       setRoute(routeFromHash());
       window.scrollTo(0, 0);
+      window.gtag?.('event', 'page_view', {
+  page_title: routeFromHash(),
+  page_location: window.location.href,
+});
+
     };
     window.addEventListener('hashchange', onHash);
     return () => window.removeEventListener('hashchange', onHash);
