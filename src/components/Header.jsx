@@ -1,6 +1,24 @@
+import { useEffect, useRef, useState } from 'react';
 import Arrow from './Arrow.jsx';
 
 export default function Header({ tab, light, onTabChange }) {
+  // On mobile, LinkedIn and Resume sit behind a burger button.
+  const [menuOpen, setMenuOpen] = useState(false);
+  const menuRef = useRef(null);
+
+  // Close the menu on Escape or a tap outside it.
+  useEffect(() => {
+    if (!menuOpen) return;
+    const onKey = (e) => e.key === 'Escape' && setMenuOpen(false);
+    const onClick = (e) => !menuRef.current?.contains(e.target) && setMenuOpen(false);
+    document.addEventListener('keydown', onKey);
+    document.addEventListener('pointerdown', onClick);
+    return () => {
+      document.removeEventListener('keydown', onKey);
+      document.removeEventListener('pointerdown', onClick);
+    };
+  }, [menuOpen]);
+
   return (
     <header className={`header ${light ? 'header--light' : ''}`}>
       <a className="header__name" href="#work" onClick={() => onTabChange('work')}>
@@ -23,13 +41,27 @@ export default function Header({ tab, light, onTabChange }) {
         ))}
       </nav>
 
-      <div className="header__links">
-        <a href="https://www.linkedin.com/in/amandaljohansen" target="_blank" rel="noreferrer">
-          LinkedIn <Arrow direction="right" />
-        </a>
-        <a href="resume.pdf" target="_blank" rel="noreferrer">
-          Resume <Arrow direction="right" />
-        </a>
+      <div className={`header__menu ${menuOpen ? 'is-open' : ''}`} ref={menuRef}>
+        <button
+          className="header__burger"
+          aria-label={menuOpen ? 'Close menu' : 'Open menu'}
+          aria-expanded={menuOpen}
+          aria-controls="header-links"
+          onClick={() => setMenuOpen((open) => !open)}
+        >
+          <span />
+          <span />
+          <span />
+        </button>
+
+        <div className="header__links" id="header-links">
+          <a href="https://www.linkedin.com/in/amandaljohansen" target="_blank" rel="noreferrer" onClick={() => setMenuOpen(false)}>
+            LinkedIn <Arrow direction="right" />
+          </a>
+          <a href="resume.pdf" target="_blank" rel="noreferrer" onClick={() => setMenuOpen(false)}>
+            Resume <Arrow direction="right" />
+          </a>
+        </div>
       </div>
     </header>
   );

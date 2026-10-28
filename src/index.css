@@ -106,8 +106,7 @@
 
   /* ---- Colours used from the JavaScript files ---- */
 
-  /* Front-page project cards: soft gradient from → to.
-     The "-to" colour is also the tilted card behind the photo on that project's page. */
+  /* Front-page project cards: soft gradient from → to. */
   --card-relesys-from: #f3e0dd;
   --card-relesys-to: #e6bcb6;
   --card-thesis-from: #f2eedb;
@@ -134,14 +133,6 @@
   --card-decibel-to: #8CC9A2;
   --card-decibel-to: #c97880;
 
-  /* Tilted card behind the photo on a project's page, when it should differ from the "-to" colour */
-  --hero-tint-study-card: #b9a5d6;
-  --hero-tint-relesys: #eba87a;
-  --hero-tint-pandas: #9fbde0;
-  --hero-tint-exhibit: #cdb894;
-  --hero-tint-maze-chase: #7cc4bd;
-  --hero-tint-decibel: #6f9a72;
-
   /* Marquee role colours, in the order of the roles */
   --marquee-1: #b24a55;
   --marquee-2: #666f2e;
@@ -151,7 +142,7 @@
 
   /* Info page */
   --tint-portrait: #cc8980;
-  /* card behind your photo */
+  /* background behind the front-page photo */
   --edu-master: #b24a55;
   /* education dots */
   --edu-bachelor: #666f2e;
@@ -255,10 +246,54 @@ button {
   background: rgb(var(--white-rgb) / 0.6);
 }
 
-.header__links {
+.header__menu {
+  position: relative;
   justify-self: end;
+}
+
+.header__links {
   display: flex;
   gap: 32px;
+}
+
+/* Burger button for LinkedIn / Resume, only shown on mobile */
+.header__burger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 40px;
+  height: 40px;
+  padding: 0 10px;
+  border-radius: 999px;
+  background: rgb(var(--glow-cream-rgb) / 0.55);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.header--light .header__burger {
+  background: rgb(var(--black-rgb) / 0.05);
+}
+
+.header__burger span {
+  display: block;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--header-name);
+  transition: transform 0.25s ease, opacity 0.2s ease;
+}
+
+/* The three lines turn into an X when the menu is open */
+.header__menu.is-open .header__burger span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.header__menu.is-open .header__burger span:nth-child(2) {
+  opacity: 0;
+}
+
+.header__menu.is-open .header__burger span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
 }
 
 .header__links a {
@@ -316,6 +351,11 @@ button {
 @media (prefers-reduced-motion: reduce) {
   .marquee__track {
     animation: none;
+  }
+
+  .header__burger span,
+  .header__links {
+    transition: none;
   }
 }
 
@@ -582,8 +622,42 @@ button {
     justify-self: center;
   }
 
+  .header__burger {
+    display: flex;
+  }
+
+  /* LinkedIn / Resume drop down under the burger */
   .header__links {
-    gap: 18px;
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 0;
+    flex-direction: column;
+    gap: 4px;
+    min-width: 160px;
+    padding: 8px;
+    border-radius: 16px;
+    background: var(--cream);
+    box-shadow: 0 12px 32px rgb(var(--umber-rgb) / 0.16);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-6px);
+    transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
+  }
+
+  .header__menu.is-open .header__links {
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+  }
+
+  .header__links a {
+    justify-content: space-between;
+    padding: 10px 12px;
+    border-radius: 10px;
+  }
+
+  .header__links a:hover {
+    background: rgb(var(--black-rgb) / 0.04);
   }
 
   .marquee {
@@ -1702,22 +1776,7 @@ body {
   font-size: 12px;
 }
 
-/* Photo on a tilted colour card */
-
-.photo {
-  position: relative;
-  isolation: isolate;
-}
-
-.photo::before {
-  content: '';
-  position: absolute;
-  inset: 4% 10% -4% -8%;
-  z-index: -1;
-  border-radius: 24px;
-  background: var(--tint);
-  transform: rotate(-5deg);
-}
+/* Photo */
 
 .photo img,
 .photo__img {
@@ -2663,21 +2722,13 @@ body {
   border-left-color: var(--accent);
 }
 
-/* Step labels and the hero photo */
+/* Step labels */
 .steps__item {
   transition: color 0.3s ease;
 }
 
 .steps__item:hover .steps__label {
   color: var(--accent);
-}
-
-.photo::before {
-  transition: transform 0.5s ease;
-}
-
-.photo:hover::before {
-  transform: rotate(-8deg);
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -2690,8 +2741,7 @@ body {
   .outcome,
   .process-card,
   .process-card__image,
-  .choice__image,
-  .photo::before {
+  .choice__image {
     transition: none;
     transform: none !important;
   }

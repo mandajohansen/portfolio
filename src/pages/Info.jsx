@@ -22,10 +22,10 @@ function Tags({ items }) {
   );
 }
 
-// A photo on a tilted colour card. Shows a soft placeholder until a photo is added.
-function Photo({ src, tint, className = '' }) {
+// A photo. Shows a soft placeholder until a photo is added.
+function Photo({ src, className = '' }) {
   return (
-    <div className={`photo ${className}`} style={{ '--tint': tint }}>
+    <div className={`photo ${className}`}>
       {src ? <img src={src} alt="" /> : <div className="photo__img placeholder" />}
     </div>
   );
@@ -97,7 +97,7 @@ export default function Info() {
               <Tags items={about.tags} />
             </div>
             <div className="about__photo">
-              <Photo src={about.photo} tint="var(--tint-portrait)" className="photo--portrait" />
+              <Photo src={about.photo} className="photo--portrait" />
             </div>
           </section>
 

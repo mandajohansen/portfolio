@@ -2,7 +2,6 @@ import { Fragment, useMemo } from 'react';
 import Arrow from '../components/Arrow.jsx';
 import Icon from '../components/Icon.jsx';
 import SideNav from '../components/SideNav.jsx';
-import { experience, moreProjects, projects } from '../data/projects.js';
 
 // Renders one case study from src/data/caseStudies.js.
 // Every section is a list of blocks; each block `type` maps to a component below.
@@ -97,14 +96,6 @@ function Underlined({ text }) {
       </span>
     </>
   );
-}
-
-// The tilted card behind the hero image uses the project's `tint`, or else the colour of its card on the front page.
-function tintFor(slug) {
-  const card = [...experience, ...projects, ...moreProjects].find((p) => p.link === `#${slug}`);
-  if (card?.tint) return card.tint;
-  const colours = card?.bg.match(/#[0-9a-f]{6}|var\(--[\w-]+\)/gi);
-  return colours ? colours[colours.length - 1] : 'var(--tint-portrait)';
 }
 
 function CardsBlock({ items }) {
@@ -464,7 +455,7 @@ export default function CaseStudy({ slug, study }) {
             ))}
             {study.notice && <p className="cs__notice">{study.notice}</p>}
           </div>
-          <div className="photo cs__photo" style={{ '--tint': tintFor(slug) }}>
+          <div className="photo cs__photo">
             {study.heroImage ? (
               <img src={study.heroImage} alt="" />
             ) : (
