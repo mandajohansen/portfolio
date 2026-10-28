@@ -219,6 +219,39 @@ button {
   justify-self: start;
 }
 
+.header__center {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Round arrow back to the Work page, beside the tabs on a case study (mobile only) */
+.header__back {
+  display: none;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  background: var(--glass-strong, rgb(var(--white-rgb) / 0.55));
+  border: 1px solid rgb(var(--white-rgb) / 0.75);
+  box-shadow: 0 4px 20px rgb(var(--clay-rgb) / 0.08);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  transition: background 0.2s;
+}
+
+.header__back svg {
+  transition: transform 0.2s;
+}
+
+.header__back:hover {
+  background: rgb(var(--white-rgb) / 0.85);
+}
+
+.header__back:hover svg {
+  transform: translateX(-3px) rotate(180deg);
+}
+
 .tabs {
   display: flex;
   gap: 4px;
@@ -272,7 +305,7 @@ button {
 }
 
 .header--light .header__burger {
-  background: rgb(var(--black-rgb) / 0.05);
+  background: var(--glass-strong, rgb(var(--white-rgb) / .55));
 }
 
 .header__burger span {
@@ -616,10 +649,14 @@ button {
     font-size: 14px;
   }
 
-  .tabs {
+  .header__center {
     grid-column: 1 / -1;
     grid-row: 2;
     justify-self: center;
+  }
+
+  .header__back {
+    display: grid;
   }
 
   .header__burger {
@@ -1268,13 +1305,25 @@ button {
 
 /* ---------- Case study: back link & content blocks ---------- */
 
+/* "Back to work" on large screens; stays in view while scrolling a case study */
 .back-link {
-  display: inline-flex;
+  position: sticky;
+  top: 20px;
+  z-index: 5;
+  display: flex;
   align-items: center;
   gap: 10px;
+  width: fit-content;
+  /* Pull it out to the left edge of the window (16px gap), also on wide screens
+     where the page is centred. 1460px = the .cs max-width. */
+  margin-left: calc(50px - var(--gutter) - max(0px, (100vw - 1460px) / 2));
   padding: 10px 18px 10px 14px;
   border-radius: 999px;
-  background: rgb(var(--black-rgb) / 0.05);
+  background: var(--glass-strong);
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 4px 20px rgb(var(--clay-rgb) / 0.08);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
   font-family: var(--serif);
   font-size: 15px;
   font-weight: 700;
@@ -1286,11 +1335,18 @@ button {
 }
 
 .back-link:hover {
-  background: rgb(var(--black-rgb) / 0.09);
+  background: rgb(var(--white-rgb) / 0.85);
 }
 
 .back-link:hover svg {
   transform: translateX(-3px) rotate(180deg);
+}
+
+/* On mobile the round arrow beside the tabs replaces it */
+@media (max-width: 860px) {
+  .back-link {
+    display: none;
+  }
 }
 
 .cs__block+.cs__block {
@@ -1592,20 +1648,6 @@ button {
   -webkit-backdrop-filter: blur(12px);
 }
 
-/* Back link */
-
-.back-link {
-  background: var(--glass-strong);
-  border: 1px solid var(--glass-border);
-  box-shadow: 0 4px 20px rgb(var(--clay-rgb) / 0.08);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-}
-
-.back-link:hover {
-  background: rgb(var(--white-rgb) / 0.85);
-}
-
 /* Side nav as a frosted panel with pill items, like the header tabs */
 
 .side-nav ul {
@@ -1716,18 +1758,6 @@ button {
   font-family: var(--serif);
   font-weight: 700;
   font-size: 18px;
-}
-
-/* Keep "Back to work" in view while scrolling a case study */
-.back-link {
-  position: sticky;
-  top: 20px;
-  z-index: 5;
-  display: flex;
-  width: fit-content;
-  /* Pull it out to the left edge of the window (16px gap), also on wide screens
-     where the page is centred. 1460px = the .cs max-width. */
-  margin-left: calc(50px - var(--gutter) - max(0px, (100vw - 1460px) / 2));
 }
 
 /* ---------- Info page ---------- */

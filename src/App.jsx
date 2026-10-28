@@ -49,7 +49,7 @@ export default function App() {
 
   return (
     <>
-      <Header tab={study ? 'work' : route} light={route !== 'work'} onTabChange={changeTab} />
+      <Header tab={study ? 'work' : route} light={route !== 'work'} showBack={!!study} onTabChange={changeTab} />
       {study ? (
         <CaseStudy key={route} slug={route} study={study} />
       ) : route === 'work' ? (

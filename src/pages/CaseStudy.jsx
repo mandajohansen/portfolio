@@ -428,6 +428,7 @@ export default function CaseStudy({ slug, study }) {
   return (
     <main className="cs">
       <div className="cs__content">
+        {/* Large screens only; on mobile the arrow sits beside the tabs in the header */}
         <a className="back-link" href="#work">
           <Arrow direction="left" size={16} />
           Back to work
