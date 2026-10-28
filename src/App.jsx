@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import Header from './components/Header.jsx';
 import Footer from './components/Footer.jsx';
+import ScrollTopButton from './components/ScrollTopButton.jsx';
 import Hero from './components/Hero.jsx';
 import Marquee from './components/Marquee.jsx';
 import Work from './pages/Work.jsx';
@@ -62,6 +63,7 @@ export default function App() {
         <Info />
       )}
       <Footer />
+      <ScrollTopButton />
     </>
   );
 }
