@@ -474,11 +474,6 @@ export const caseStudies = {
               },
             ],
           },
-          {
-            type: 'highlight',
-            label: 'Design challenge',
-            text: 'How can we transform repetitive phonological exercises into something engaging for young children without losing the training purpose of the exercises?',
-          },
         ],
       },
       {
@@ -530,16 +525,10 @@ export const caseStudies = {
               'I contributed throughout the process from initial research to final evaluation.',
             ],
             list: [
-              'Researching phonological awareness and serious games;',
               'Interviewing speech and language specialists;',
-              'Translating expert insights into design requirements;',
-              'Contributing to the game concept and interaction design;',
               'Designing exercises and gameplay around phonemic listening;',
               'Testing prototypes with kindergarten children;',
-              'Observing behaviour and identifying usability problems;',
-              'Analysing qualitative testing data;',
-              'Iterating the product based on both children and expert feedback;',
-              'Contributing to the implementation and final evaluation.',
+              'Iterating the product based on both children and expert feedback.',
             ],
           },
         ],
@@ -574,14 +563,10 @@ export const caseStudies = {
               'From the research we translated our findings into design requirements including:',
             ],
             list: [
-              'Tablet-based interaction;',
-              'Child involvement throughout development;',
               'Receptive phonological exercises;',
               'Exercises related to fronting and backing;',
               'Simple interactions and objectives;',
               'Visual and auditory representations of sounds;',
-              'Gamified interpretations of existing exercises;',
-              'Interaction design appropriate for young children;',
               'Avoiding mechanics that reward random guessing.',
             ],
             after: 'That gave us a useful design principle:',
@@ -596,29 +581,7 @@ export const caseStudies = {
             type: 'text',
             body: [
               'Instead of presenting children with traditional exercise sheets, **we transformed phonological exercises into short game mechanics.**',
-              'The concept became an animal-themed world guided by a panda character who introduces the different tasks and encourages the player. We designed three core types of interaction.',
-            ],
-          },
-          {
-            type: 'choices',
-            label: 'Three core interactions',
-            wide: true,
-            items: [
-              {
-                title: 'Sound Candy',
-                text: 'Children listen to a sound or nonsense word and drag a piece of “sound candy” to the animal associated with the corresponding phoneme. Simple, visual, and suitable for touchscreens and small hands.',
-                image: 'images/Bane1Iteration2.png',
-              },
-              {
-                title: 'Sound Selection',
-                text: 'Children listen to a sound and navigate between animals to select the one representing the correct phoneme.',
-                image: 'images/Level 2 - Iteration3.png',
-              },
-              {
-                title: 'Sound Puzzle',
-                text: 'Children listen to a sound and identify the matching animal within a visual grid.',
-                image: 'images/iteration3level3.png',
-              },
+              'The concept became an animal-themed world guided by a panda character who introduces the different tasks and encourages the player. We designed three core types of interaction, shown under The final product below.',
             ],
           },
           {
@@ -640,10 +603,6 @@ export const caseStudies = {
               { title: 'Minimal interface clutter', text: 'Only elements necessary for the current task were emphasized.' },
               { title: 'Consistent interactions', text: 'Navigation, feedback, and recurring characters behaved similarly between levels.' },
             ],
-          },
-          {
-            type: 'text',
-            body: 'These choices were grounded in interaction-design principles and guidelines for serious games for young children, including reducing cognitive load, avoiding clutter, making interaction elements easy to identify, and favouring recognition over remembering.',
           },
 
           { type: 'subheading', number: 4, title: 'Test with the actual users', image: null, caption: null, },
@@ -705,10 +664,6 @@ export const caseStudies = {
               },
             ],
           },
-          {
-            type: 'text',
-            body: 'These changes are clearly visible between the first and second design iterations.',
-          },
 
           { type: 'subheading', number: 6, title: 'Iterate with both users and experts', image: null, caption: null, },
           {
@@ -730,12 +685,7 @@ export const caseStudies = {
             type: 'text',
             body: [
               'The expert considered this progression from phonemic exercises to nonsense-word exercises appropriate.',
-              'The structure of the final product wasn’t arbitrary:',
             ],
-          },
-          {
-            type: 'flow',
-            items: ['Research insight', 'Expert feedback', 'Difficulty progression', 'Final architecture'],
           },
 
           { type: 'subheading', title: 'The final product', image: null, caption: null, },
@@ -745,14 +695,6 @@ export const caseStudies = {
               'The final tablet application contained **six levels across three gameplay mechanics**, each presented at two levels of phonological difficulty.',
               'The panda acted as a recurring guide, while consistent animal characters represented phonemes throughout the experience.',
             ],
-          },
-          {
-            type: 'flow',
-            items: ['Menu', 'Level Selection', 'Game', 'Completion'],
-          },
-          {
-            type: 'text',
-            body: 'Players could replay levels, continue to the next level, pause, restart, or return to the menu. The structure balanced user freedom with consistency and familiarity.',
           },
           {
             type: 'choices',
@@ -839,16 +781,16 @@ export const caseStudies = {
           },
           {
             type: 'text',
-            body: 'The findings supported the game as a **supplement to existing phonological training**, rather than a replacement for speech therapists or parent involvement.',
+            body: [
+              'The findings supported the game as a **supplement to existing phonological training**, rather than a replacement for speech therapists or parent involvement.',
+              'Throughout development, testing with kindergarten children and feedback from a speech therapist directly shaped the interaction, instructions, difficulty and UI.',
+            ],
           },
           { type: 'subheading', title: 'Key outcomes', image: null, caption: '' },
           {
             type: 'metrics',
             items: [
               { value: '3 → 6', text: 'Core levels expanded into a structured two-stage difficulty progression.' },
-              { value: 'Multiple iterations', text: 'Testing findings directly changed interaction, instructions, difficulty and UI.' },
-              { value: 'Real users', text: 'The game was repeatedly tested with kindergarten children during development.' },
-              { value: 'Expert-guided', text: 'Speech-therapy expertise shaped both the exercises and final evaluation.' },
               { value: '“Play again”', text: 'Both children in the final target-group test said they wanted to play again.' },
             ],
           },
@@ -915,11 +857,6 @@ export const caseStudies = {
               },
             ],
           },
-          {
-            type: 'highlight',
-            label: 'Core user need',
-            text: 'Any digital replacement had to remain as fast and reliable as the physical card while providing additional value.',
-          },
         ],
       },
       {
@@ -936,10 +873,6 @@ export const caseStudies = {
               'The physical study card already performed its primary task well: students could take it out, scan it, and enter.',
               'Research nevertheless revealed recurring **frustrations around forgotten cards, unclear room permissions, missing access, student information, and fragmented university services.**',
             ]
-          },
-          {
-            type: 'quote',
-            text: 'A digital version could not simply be a copy of the physical card.',
           },
           {
             type: 'text',
@@ -970,13 +903,9 @@ export const caseStudies = {
             ],
             list: [
               'Investigated student needs through interviews, survey research, and a focus group;',
-              'Translated research into product and interaction requirements;',
               'Developed user flows, sketches, and interface concepts;',
               'Prototyped the mobile experience in Figma;',
-              'Contributed to the interactive implementation;',
-              'Conducted think-aloud and task-based usability testing;',
-              'Analysed qualitative and quantitative usability findings;',
-              'Developed the interface over three versions, with two rounds of user testing.',
+              'Conducted think-aloud and task-based usability testing.',
             ],
           },
           {
@@ -1049,15 +978,6 @@ export const caseStudies = {
               '**NFC campus access emerged as the highest priority**, followed by room permissions, student information, discounts, and university services.',
             ],
           },
-          {
-            type: 'flow',
-            label: 'Product shift',
-            items: [
-              'Digital copy of the card',
-              'Campus access + student services',
-              'Digital student companion',
-            ],
-          },
 
           // 3 — REQUIREMENTS
           {
@@ -1099,11 +1019,6 @@ export const caseStudies = {
               },
             ],
           },
-          {
-            type: 'highlight',
-            label: 'Design principle',
-            text: 'Preserve what already worked, then use digital capabilities to add value the physical card could not provide.',
-          },
 
           // 4 — CORE EXPERIENCE
           {
@@ -1119,11 +1034,6 @@ export const caseStudies = {
               'The physical study card already performed its primary task efficiently: take it out, scan it, and enter.',
               'A digital replacement could not turn that interaction into a multi-step flow, so the card remained immediately accessible from the main screen with NFC as the primary interaction.',
             ],
-          },
-          {
-            type: 'flow',
-            label: 'Existing behaviour',
-            items: ['Take card', 'Scan', 'Enter'],
           },
           {
             type: 'text',
@@ -1251,10 +1161,8 @@ export const caseStudies = {
           {
             type: 'text',
             body: [
-              'The second iteration showed a measurable improvement in navigation efficiency. In the first iteration, only one participant consistently reached the optimal click count across tasks. In the second iteration, 4 out of 6 participants achieved the optimal number of clicks across the first five tasks, suggesting improved efficiency after the redesign.',
-              'The PSSUQ evaluation was also positive. The average score for system usefulness was 6.28/7, while the information and interface categories also averaged above 6. The sample of six participants was too small to treat these numbers as representative of the whole student population.',
-              'The final test also gave a **mean SUS score of 88.52**, well above the average of 68 in Sauro’s benchmark and above the 97th percentile. The 95% confidence interval was 82.94 to 94.10, so even its lower end is well above average, although the small sample may not represent all students.',
-              'The interviews supported those findings: participants commonly described the application as easy, fast and straightforward, and users recognised familiar navigation and visual patterns from other mobile applications.',
+              'After the redesign, most participants completed the tasks in the optimal number of clicks, and usability scores were well above average.',
+              'Participants described the app as easy, fast and straightforward, and recognised familiar patterns from other mobile apps.',
               'Perhaps the most meaningful product result was this:',
             ],
           },
@@ -1264,7 +1172,7 @@ export const caseStudies = {
           },
           {
             type: 'text',
-            body: 'That doesn’t prove all AAU students would prefer it, but it does show that the tested concept was moving toward the project’s intended experience.',
+            body: 'With six participants, that doesn’t prove all AAU students would prefer it, but it shows the concept was moving in the right direction.',
           },
           { type: 'subheading', title: 'Key outcomes', image: null, caption: '' },
           {
@@ -1352,15 +1260,6 @@ export const caseStudies = {
               { title: 'Blind spots' },
             ],
           },
-          {
-            type: 'text',
-            body: 'These became central to the product direction.',
-          },
-          {
-            type: 'highlight',
-            label: 'Core user need',
-            text: 'Learner drivers needed a way to experience movement and orientation before encountering the same situations on the road.',
-          },
         ],
       },
       {
@@ -1388,18 +1287,12 @@ export const caseStudies = {
             ],
           },
           {
-            type: 'quote',
-            text: 'The problem was not that theory lacked information, but that some information was difficult to understand without experiencing movement and space.',
-          },
-          {
             type: 'text',
             body: [
               'The driving instructors repeatedly identified this limitation. They explained that students sometimes struggled with questions involving speed and distance because static images did not communicate movement, and that orientation and head movement were important aspects of real driving that existing tools did not adequately represent.',
               'The student research supported this. Some students reported that situations were hard to imagine from images alone, and 93% of the first survey group preferred active tasks and theory-test practice over simply reading from a book.',
-              'That led us to investigate VR as a bridge between:',
             ],
           },
-          { type: 'flow', items: ['Learning the theory', 'Experiencing the situation'] },
           {
             type: 'highlight',
             label: 'Design challenge',
@@ -1424,12 +1317,9 @@ export const caseStudies = {
             ],
             list: [
               'Interviewed driving instructors and surveyed learner drivers;',
-              'Translated research into VR interaction and learning requirements;',
               'Designed traffic scenarios and interaction flows;',
               'Explored alternative VR interface concepts;',
-              'Prototyped and implemented the experience in Unity;',
-              'Tested usability, presence, feedback, and interaction quality;',
-              'Evaluated the final concept with learner drivers and professional instructors.',
+              'Tested usability, presence, feedback, and interaction quality.',
             ],
           },
         ],
@@ -1442,10 +1332,6 @@ export const caseStudies = {
         image: null,
         caption: '',
         blocks: [
-          {
-            type: 'text',
-            body: 'The design was guided by both user research and principles of immersion, learning and VR interaction.',
-          },
           {
             type: 'steps',
             items: [
@@ -1471,10 +1357,6 @@ export const caseStudies = {
               'We began with the existing driving-education experience rather than assuming VR was the solution.',
               'Interviews with driving instructors identified a recurring limitation: static theory material was effective for explaining rules, but weaker at communicating **movement, distance, orientation, and head movement**.',
             ],
-          },
-          {
-            type: 'quote',
-            text: 'Existing theory tools lacked movement.',
           },
           {
             type: 'flow',
@@ -1520,11 +1402,6 @@ export const caseStudies = {
                 text: 'Explain why decisions were right or wrong. This scenario shows a learner driver passing a stationary vehicle, having to look for oncoming traffic and position themselves correctly.',
               },
             ],
-          },
-          {
-            type: 'highlight',
-            label: 'Product role',
-            text: 'Use VR for the parts of driving theory that benefit from spatial, perceptual, and movement-based experience.',
           },
           {
             type: 'subheading',
@@ -1600,14 +1477,6 @@ export const caseStudies = {
                 text: 'Assess oncoming traffic while positioning around another vehicle.',
                 image: 'images/Overtaking.png',
               },
-            ],
-          },
-          {
-            type: 'flow',
-            items: [
-              'Theory material',
-              'Figma concept',
-              'Interactive VR scenario',
             ],
           },
 
@@ -1769,10 +1638,6 @@ export const caseStudies = {
               'They also identified areas for further development, including visual fidelity, more realistic consequences, improved vehicle behaviour, and a broader range of scenarios.',
             ],
           },
-          {
-            type: 'quote',
-            text: 'The strongest role for the simulator was not replacing theory lessons, but making spatial and movement-based concepts easier to experience before real-world driving.',
-          },
         ],
       },
     ],
@@ -1820,23 +1685,8 @@ export const caseStudies = {
             ],
           },
           {
-            type: 'notes',
-            items: [
-              { title: 'Speech in noise' },
-              { title: 'Sound localization' },
-              { title: 'Auditory memory' },
-              { title: 'Sound discrimination' },
-              { title: 'Filtering distractions' },
-            ],
-          },
-          {
             type: 'text',
             body: 'Expert interviews also highlighted a gap in engaging digital training options designed specifically for older children and teenagers.',
-          },
-          {
-            type: 'highlight',
-            label: 'Core user need',
-            text: 'Auditory training needed to remain repetitive enough to support practice without becoming so repetitive that users disengaged.',
           },
         ],
       },
@@ -1854,10 +1704,6 @@ export const caseStudies = {
               'Auditory training often depends on repeated listening exercises, but repetition can reduce motivation and make practice feel clinical or monotonous.',
               'Because regular practice is important, engagement was not simply a visual or entertainment concern, it directly affected whether users were likely to continue training.',
             ],
-          },
-          {
-            type: 'quote',
-            text: 'The training needed repetition. The game needed to make that repetition worth continuing.',
           },
           {
             type: 'highlight',
@@ -1881,14 +1727,10 @@ export const caseStudies = {
               '**I was primarily responsible for the UX.** I designed the layout and visibility of the interface in Figma, building on free assets, led the communication with stakeholders, and prepared and ran the tests.',
             ],
             list: [
-              'Researched APD and existing auditory-training approaches;',
               'Interviewed audiology specialists and investigated target-group needs;',
               'Translated auditory exercises into game mechanics;',
-              'Contributed to narrative, game flow, and interaction design;',
               'Designed accessibility and UI considerations;',
-              'Implemented gameplay and spatial-audio behaviour;',
-              'Conducted usability and target-group testing;',
-              'Evaluated the concept with an audiology specialist.',
+              'Conducted usability and target-group testing.',
             ],
           },
         ],
@@ -1966,27 +1808,27 @@ export const caseStudies = {
             items: [
               {
                 title: 'Mobile-first',
-                text: 'The experience should run on a device already familiar and accessible to the target group.',
+                text: 'Runs on a device the target group already uses.',
               },
               {
                 title: 'Spatial audio',
-                text: 'Sound direction should become an active part of the training mechanics.',
+                text: 'Sound direction is part of the training mechanics.',
               },
               {
                 title: 'Realistic listening environments',
-                text: 'Background noise and reverberation should reflect situations such as school and traffic.',
+                text: 'Background noise and reverberation from places like school and traffic.',
               },
               {
                 title: 'Training through gameplay',
-                text: 'APD exercises should be embedded into game mechanics rather than presented as separate tests.',
+                text: 'APD exercises built into the mechanics, not presented as separate tests.',
               },
               {
                 title: 'Progressive difficulty',
-                text: 'Auditory challenge should increase gradually as the player progresses.',
+                text: 'The listening challenge grows as the player progresses.',
               },
               {
                 title: 'Accessible interaction',
-                text: 'Visual reinforcement, clear instructions, and adjustable audio should support different user needs.',
+                text: 'Visual cues, clear instructions and adjustable audio.',
               },
             ],
           },
@@ -2015,10 +1857,6 @@ export const caseStudies = {
               'React',
               'Continue',
             ],
-          },
-          {
-            type: 'quote',
-            text: 'Gameplay gave repetition structure; the narrative gave it meaning.',
           },
 
           {
@@ -2097,10 +1935,6 @@ export const caseStudies = {
                 text: 'Sound and background-noise levels could be adapted to individual needs.',
               },
             ],
-          },
-          {
-            type: 'quote',
-            text: 'Difficulty should come from the skill being trained, not from unclear interaction.',
           },
 
           {
@@ -2296,11 +2130,6 @@ export const caseStudies = {
               { title: 'Often visiting socially' },
             ],
           },
-          {
-            type: 'highlight',
-            label: 'Core user need',
-            text: 'The experience had to provide accessible information without requiring visitors to download an app or disengage from the physical museum.',
-          },
         ],
       },
       {
@@ -2352,10 +2181,7 @@ export const caseStudies = {
             ],
             list: [
               'Researched museum visitor behaviour and stakeholder needs;',
-              'Interviewed museum professionals about interactive exhibition design;',
-              'Translated research into a shared physical interaction concept;',
               'Designed the card system and projected feedback;',
-              'Tested early proofs of concept with users;',
               'Iterated the interaction and onboarding based on observed behaviour;',
               'Tested the final installation with visitors inside Thorvaldsens Museum.',
             ],
@@ -2370,10 +2196,6 @@ export const caseStudies = {
         image: null,
         caption: '',
         blocks: [
-          {
-            type: 'text',
-            body: 'The solution was shaped by both visitor behaviour and museum constraints.',
-          },
           {
             type: 'steps',
             items: [
@@ -2444,10 +2266,6 @@ export const caseStudies = {
               },
             ],
           },
-          {
-            type: 'quote',
-            text: 'The technology should support the museum experience, not compete with it.',
-          },
 
           {
             type: 'subheading',
@@ -2466,19 +2284,8 @@ export const caseStudies = {
 
           {
             type: 'flow',
-            items: [
-              { title: 'Question card', text: '“Which statue depicts the acting pope from 1800 until his death?”' },
-              { title: 'Sculpture card', text: 'Pius VII' },
-            ],
-          },
-          {
-            type: 'flow',
             label: 'Interaction loop',
             items: ['Read', 'Discuss', 'Choose', 'Place', 'Receive feedback', 'Learn'],
-          },
-          {
-            type: 'quote',
-            text: 'Learning became something visitors could discuss and act on together.',
           },
           {
             type: 'subheading',
@@ -2583,10 +2390,6 @@ export const caseStudies = {
                 ],
               },
             ],
-          },
-          {
-            type: 'quote',
-            text: 'The same object had to be understandable to a museum visitor and recognizable to a machine.',
           },
 
           {
@@ -2745,11 +2548,6 @@ export const caseStudies = {
               { title: 'VR experience' },
             ],
           },
-          {
-            type: 'highlight',
-            label: 'Core challenge',
-            text: 'Support high- and low-performing players in the same session without making the balancing system feel unfair.',
-          },
         ],
       },
       {
@@ -2766,10 +2564,6 @@ export const caseStudies = {
               'Dynamic Difficulty Adjustment is commonly used to keep challenge aligned with player skill.',
               'In multiplayer games, however, changing the experience for one player can affect everyone else. Helping a struggling player can easily feel like punishing a stronger one.',
             ],
-          },
-          {
-            type: 'quote',
-            text: 'The challenge was not simply to balance difficulty, but to do it without making the balancing feel visible or unfair.',
           },
           {
             type: 'highlight',
@@ -2792,13 +2586,9 @@ export const caseStudies = {
               'As part of a three-person team, I contributed across **game design, adaptive-system design, VR interaction, experimental testing, and data analysis**.',
             ],
             list: [
-              'Researched multiplayer Dynamic Difficulty Adjustment and flow theory;',
               'Designed the seeker-and-hider game loop;',
-              'Defined player-performance metrics;',
               'Translated performance into adaptive maze generation;',
-              'Contributed to procedural level-generation logic;',
               'Built adaptive and non-adaptive experimental conditions;',
-              'Evaluated player experience using the Flow Short Scale;',
               'Analysed quantitative and qualitative results.',
             ],
           },
@@ -2864,10 +2654,6 @@ export const caseStudies = {
             ],
           },
           {
-            type: 'quote',
-            text: 'Adapt the challenge while keeping the experience seamless.',
-          },
-          {
             type: 'subheading',
             number: 2,
             title: 'Adapt the environment, not the player',
@@ -2926,11 +2712,6 @@ export const caseStudies = {
               'Shorter distance from seeker',
               'Greater pressure',
             ],
-          },
-          {
-            type: 'highlight',
-            label: 'Adaptive logic',
-            text: 'Performance changed the spatial relationship between players rather than their movement abilities.',
           },
 
           {
@@ -3003,15 +2784,6 @@ export const caseStudies = {
               },
             ],
           },
-          {
-            type: 'flow',
-            items: [
-              'Player performance',
-              'Target distance',
-              'Maze generation',
-              'Personalized challenge',
-            ],
-          },
 
           {
             type: 'subheading',
@@ -3045,10 +2817,6 @@ export const caseStudies = {
               'The final comparison used 12 players per condition.',
               'Rather than measuring enjoyment alone, we used the Flow Short Scale to evaluate concentration, challenge, control, absorption, and smoothness of action.',
             ],
-          },
-          {
-            type: 'quote',
-            text: 'We measured the experience the adaptive system was intended to influence, not simply whether players liked the game.',
           },
         ],
       },
@@ -3094,10 +2862,6 @@ export const caseStudies = {
               'The adaptive condition produced slightly more balanced player outcomes, but it did not produce higher overall flow.',
               'The difference in flow between adaptive and non-adaptive gameplay was not statistically significant.',
             ],
-          },
-          {
-            type: 'quote',
-            text: 'Balancing performance did not automatically create a better experience.',
           },
 
           {
@@ -3211,17 +2975,9 @@ export const caseStudies = {
             featured: false,
             items: [
               { value: '38%', text: 'Had experienced tinnitus.' },
-              { value: '21%', text: 'Had tried earplugs.' },
-              { value: '33%', text: 'Never thought about potential hearing consequences.' },
               { value: '61%', text: 'Had thought about the risks but had not changed their habits.' },
               { value: '20%', text: 'Believed they were personally at risk.' },
-              { value: 'Over half', text: 'Were unsure whether hearing damage was reversible.' },
             ],
-          },
-          {
-            type: 'highlight',
-            label: 'Core user need',
-            text: 'The risk needed to feel personally relevant before preventative behavior would feel worth adopting.',
           },
         ],
       },
@@ -3274,13 +3030,9 @@ export const caseStudies = {
               'As part of a five-person team, I contributed across **research, VR experience design, interaction design, sound design, implementation, and evaluation**.',
             ],
             list: [
-              'Researched noise-induced hearing loss and protective behavior;',
-              'Investigated the target group and relevant behavior-change theory;',
               'Translated the Health Belief Model into design requirements;',
               'Designed three connected VR scenarios;',
               'Created first-person interactions and hearing-loss simulations;',
-              'Designed prevention mechanics around distance, exposure, and earplugs;',
-              'Implemented and tested the experience in Unity;',
               'Evaluated VR against reading and control conditions using a KAB questionnaire.',
             ],
           },
@@ -3411,14 +3163,6 @@ export const caseStudies = {
               },
             ],
           },
-          {
-            type: 'flow',
-            items: [
-              'Know the risk',
-              'Feel the consequence',
-              'Practice the solution',
-            ],
-          },
 
           {
             type: 'subheading',
@@ -3447,10 +3191,6 @@ export const caseStudies = {
                 why: 'Users experienced the social consequence instead of only reading about it.',
               },
             ],
-          },
-          {
-            type: 'quote',
-            text: 'Instead of explaining the consequence, let the user experience it.',
           },
           {
             type: 'subheading',
@@ -3503,10 +3243,6 @@ export const caseStudies = {
               'Move away or use earplugs',
               'Exposure decreases',
             ],
-          },
-          {
-            type: 'quote',
-            text: 'The protection advice became part of the rules rather than another piece of text.',
           },
           {
             type: 'subheading',
@@ -3588,10 +3324,6 @@ export const caseStudies = {
               'Knowledge increased significantly in both the VR and reading conditions.',
               'The VR group improved slightly more, but the difference between the two interventions was small and not statistically significant.',
             ],
-          },
-          {
-            type: 'quote',
-            text: 'Immersion did not automatically make information more learnable than reading.',
           },
 
           {
@@ -3750,20 +3482,6 @@ export const caseStudies = {
               },
             ],
           },
-          {
-            type: 'text',
-            body: 'The clients spanned multiple industries, each with different visual identities and communication needs.',
-          },
-          {
-            type: 'notes',
-            items: [
-              { title: 'Hospitality' },
-              { title: 'Fashion' },
-              { title: 'Retail' },
-              { title: 'Grocery' },
-              { title: 'Manufacturing' },
-            ],
-          },
         ],
       },
 
@@ -3823,10 +3541,7 @@ export const caseStudies = {
             list: [
               'Created rapid prototypes in Figma;',
               'Translated brand identities into mobile interface systems;',
-              'Designed responsive layouts within platform constraints;',
               'Implemented visual customizations using CSS and LESS;',
-              'Worked directly within the Relesys CMS;',
-              'Resolved design and implementation tasks through Jira;',
               'Collaborated across Design, Client Success, Implementation, Solution Engineering, and Sales.',
             ],
           },
@@ -3866,10 +3581,6 @@ export const caseStudies = {
               'Requests came in from several teams, so I read them through and prioritised them by their deadlines.',
               'I translated these inputs into a focused design direction before moving into visual exploration.',
             ],
-          },
-          {
-            type: 'flow',
-            items: ['Client requirements', 'Design priorities', 'Interface direction'],
           },
 
           {
