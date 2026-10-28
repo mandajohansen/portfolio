@@ -1819,9 +1819,11 @@ button {
 /* ---------- Info page ---------- */
 /* Reuses the case-study layout (.cs grid, glass tokens, colour glows, side nav). */
 
-body {
+/* The full-width bands (Education, Results) reach far past the screen edges.
+   Clip them on #root, not body: overflow set on body is handed to the browser
+   window instead, and mobile Safari ignores it there, so the page could scroll sideways. */
+#root {
   overflow-x: clip;
-  /* lets full-width bands bleed past the content column */
 }
 
 .info-page {
