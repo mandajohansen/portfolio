@@ -306,6 +306,8 @@ button {
 
 .header--light .header__burger {
   background: var(--glass-strong, rgb(var(--white-rgb) / .55));
+  border: 1px solid rgb(var(--white-rgb) / .75);
+  box-shadow: 0 4px 20px rgb(var(--clay-rgb) / .08);
 }
 
 .header__burger span {
@@ -529,7 +531,7 @@ button {
 }
 
 /* Space between the wide featured card and the two cards under it */
-.work .card--wide + .grid {
+.work .card--wide+.grid {
   margin-top: 40px;
 }
 
@@ -613,7 +615,7 @@ button {
     font-size: 13px;
   }
 
-  .work .card--wide + .grid {
+  .work .card--wide+.grid {
     margin-top: 24px;
   }
 
