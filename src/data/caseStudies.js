@@ -70,11 +70,6 @@ export const caseStudies = {
               { title: 'Part-time employees', text: 'Mainly want information about upcoming shifts or operational information directly relevant to their next shift and role.' },
             ],
           },
-          {
-            type: 'highlight',
-            label: 'Design challenge',
-            text: 'How can one communication platform support different responsibilities without overwhelming employees with irrelevant information?',
-          },
         ],
       },
       {
@@ -109,10 +104,6 @@ export const caseStudies = {
             label: 'Problem',
             text: 'How might I create one structured communication environment that fits the fast, mobile and role-dependent reality of retail work?',
           },
-          {
-            type: 'quote',
-            text: 'The goal was not to replace face-to-face communication, but to create a persistent digital reference point around it.',
-          },
         ],
       },
       {
@@ -128,38 +119,9 @@ export const caseStudies = {
             body: [
               'I led the project from **research through design, development, and evaluation**.',
               'My work included user research, literature and competitor research, information architecture, UX/UI design, prototyping, usability testing, qualitative and quantitative analysis, and mobile development.',
-              'This included:',
-            ],
-            list: [
-              'Interviews with retail employees resulting in analysed communication behaviours and pain points;',
-              'Translated findings into design requirements;',
-              'Explored alternative information architectures and interface concepts;',
-              'Created low- and high-fidelity prototypes in Figma;',
-              'Evaluated competing designs with users before committing to one direction;',
-              'Designed role-specific content and navigation;',
-              'Developed the application using React Native and Expo, with Firebase supporting backend/data management;',
-              'Conducted usability and real-world acceptance evaluations.',
             ],
             after:
               'The final application included areas such as news, shift handovers, peer knowledge, a knowledge bank, schedules, chat, contacts and role-based content, **creating an all-in-one communication environment**.',
-          },
-                    {
-            type: 'text',
-            body: [
-              '**I planned and managed the project timeline myself** using a Gantt chart, from defining the problem in February to the final deadline on 26 May 2026.',
-              'The phases overlapped on purpose, so research, design and evaluation could feed into each other while the report was written throughout.',
-            ],
-          },
-          {
-            type: 'stages',
-            items: [
-              { title: 'Project foundation', meta: '3 – 23 Feb', text: 'Topic, users, use cases, problem statement and project scope.' },
-              { title: 'State of the art', meta: '10 Feb – 16 Mar', text: 'Literature review, prior work and open research gaps.' },
-              { title: 'Methodology', meta: '24 Feb – 16 Mar', text: 'Choice of methods and an evaluation plan.' },
-              { title: 'Design & prototyping', meta: '10 Mar – 20 Apr', text: 'Low- to high-fidelity prototypes, tested early and refined.' },
-              { title: 'Implementation', meta: '31 Mar – 4 May', text: 'Final prototype built and documented.' },
-              { title: 'Evaluation & discussion', meta: '14 Apr – 23 May', text: 'User studies, analysis, limitations and future work.' },
-            ],
           },
         ],
       },
@@ -254,17 +216,17 @@ export const caseStudies = {
             items: [
               {
                 title: 'A - Minimalist',
-                text: 'A simple, clean interface with minimal distractions, focusing on the essential information needed for handovers. Where the user can write what ever they find important to report',
+                text: 'A simple, open form where employees write whatever they find important to report.',
                 image: 'images/Form iphone 1.png',
               },
               {
                 title: 'B - Hybrid',
-                text: 'This design combines elements of both the minimalist and codified approaches, providing a balance between simplicity and structure. It includes predefined fields for key information while still allowing users to add custom notes.',
+                text: 'Predefined fields for key information, plus room for custom notes.',
                 image: 'images/Form iphone 2.png',
               },
               {
                 title: 'C - Codified',
-                text: 'A structured form with predefined fields and categories, guiding users to provide specific information in a consistent format. This approach aims to standardize handovers and ensure that critical details are not overlooked.',
+                text: 'A structured form with set fields and categories, so every handover covers the same critical details.',
                 image: 'images/Form iphone 3.png',
                 chosen: true,
               },
@@ -347,15 +309,15 @@ export const caseStudies = {
             items: [
               {
                 title: 'Preference testing',
-                text: '11 of 15 invited employees from the same store, some of whom had also been interviewed, evaluated alternative interface directions before the final design was selected.',
+                text: '11 store employees compared alternative designs before I chose the final direction.',
               },
               {
                 title: 'Usability testing',
-                text: 'After a pilot test with three participants, four store employees (two managers, one full-time and one part-time) completed realistic, role-specific tasks while thinking aloud, followed by the System Usability Scale and interviews. Tasks included locating information, confirming must-read communication, creating posts, creating handovers and finding schedules.',
+                text: 'After a pilot test, four employees completed role-specific tasks while thinking aloud, followed by SUS and interviews.',
               },
               {
                 title: 'Field evaluation',
-                text: 'Five employees (three managers, one full-time and one part-time) used the application for five days on Android phones I provided. Diary entries, interviews and the Digital Communication Acceptance Scale were used to understand how the system might fit into everyday work.',
+                text: 'Five employees used the app on store phones for five days, followed by diaries, interviews and an acceptance scale.',
               },
             ],
           },
@@ -397,20 +359,6 @@ export const caseStudies = {
             type: 'text',
             body: 'The pilot also showed that some test tasks did not fit every role, so I adjusted the test so each participant saw the design and tasks for their own role.',
           },
-          {
-            type: 'flow',
-            label: 'The full process',
-            items: [
-              'Research',
-              'Requirements',
-              'Alternatives',
-              'User preference',
-              'Prototype',
-              'Implementation',
-              'Usability',
-              'Real-world evaluation',
-            ],
-          },
         ],
       },
       {
@@ -423,11 +371,7 @@ export const caseStudies = {
         blocks: [
           {
             type: 'text',
-            body: [
-              'Across the four usability test participants, the final prototype achieved a System Usability Scale score of 79.4 (individual scores 85, 77.5, 77.5 and 77.5), against a benchmark average of 68. That places it approximately in the 85th–89th percentile.',
-              'In the field test, every dimension of the Digital Internal Communication Acceptance Scale scored **5.44 or higher out of 7**. Interaction facilitation scored 6.06, while communication apprehension was only 1.25, meaning users felt **comfortable communicating through the app**.',
-              'Participants also recognized the product as addressing issues identified during the initial research, with **shift handovers receiving particularly strong support**.',
-            ],
+            body: 'Usability scored well above the benchmark average of 68, and in the field test users felt **comfortable communicating through the app**. Participants recognized the product as solving the problems from the initial research, with **shift handovers receiving particularly strong support**.',
           },
           { type: 'subheading', title: 'Outcome', image: null, caption: '' },
           {
