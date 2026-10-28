@@ -99,9 +99,10 @@ function Underlined({ text }) {
   );
 }
 
-// The tilted card behind the hero image uses the colour of the project's card on the front page.
+// The tilted card behind the hero image uses the project's `tint`, or else the colour of its card on the front page.
 function tintFor(slug) {
   const card = [...experience, ...projects, ...moreProjects].find((p) => p.link === `#${slug}`);
+  if (card?.tint) return card.tint;
   const colours = card?.bg.match(/#[0-9a-f]{6}|var\(--[\w-]+\)/gi);
   return colours ? colours[colours.length - 1] : 'var(--tint-portrait)';
 }

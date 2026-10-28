@@ -5,6 +5,8 @@
 //        No import line is needed (and one pointing to ../public will break the site).
 // bg:    the soft background colour behind the image. The colours are set as
 //        --card-...-from / --card-...-to at the top of src/index.css.
+// tint:  optional colour for the tilted card behind the photo on the project page
+//        (otherwise the "-to" colour from bg is used).
 // link:  where the arrow button goes (case study URL, PDF, etc.).
 // summary: one line under the title: what it is, who it was for, one result.
 // wide:  the card sits full width above the other project cards.
@@ -17,6 +19,7 @@ export const experience = [
     tag: 'Mobile applications',
     image: 'images/Relesyscard.png',
     bg: 'linear-gradient(135deg, var(--card-relesys-from) 0%, var(--card-relesys-to) 100%)',
+    tint: 'var(--hero-tint-relesys)',
     link: '#relesys',
   },
 ];
@@ -50,6 +53,7 @@ export const projects = [
     tag: 'Mobile Application',
     image: 'images/digitalcardcard.png',
     bg: 'linear-gradient(160deg, var(--card-study-card-from) 0%, var(--card-study-card-to) 100%)',
+    tint: 'var(--hero-tint-study-card)',
     link: '#digital-study-card',
   },
 ];
@@ -69,6 +73,7 @@ export const moreProjects = [
     type: 'Tablet game · Bachelor’s Project',
     summary: 'Phonological awareness training for kindergarten children, tested with real users',
     bg: 'linear-gradient(160deg, var(--card-pandas-from) 0%, var(--card-pandas-to) 100%)', // tilted card on the project page
+    tint: 'var(--hero-tint-pandas)',
     link: '#pandas-fonologiske-lege',
   },
   {
@@ -76,6 +81,7 @@ export const moreProjects = [
     type: 'Museum installation · Semester Project',
     summary: 'A social, physical-digital exhibit at Thorvaldsens Museum · 23 visitors tested it',
     bg: 'linear-gradient(160deg, var(--card-exhibit-from) 0%, var(--card-exhibit-to) 100%)', // tilted card on the project page
+    tint: 'var(--hero-tint-exhibit)',
     link: '#interactive-exhibit',
   },
   {
@@ -83,6 +89,7 @@ export const moreProjects = [
     type: 'Multiplayer VR game · Semester Project',
     summary: 'Dynamic difficulty that balances players through the environment · 24 players',
     bg: 'linear-gradient(160deg, var(--card-maze-chase-from) 0%, var(--card-maze-chase-to) 100%)', // tilted card on the project page
+    tint: 'var(--hero-tint-maze-chase)',
     link: '#maze-chase',
   },
   {
@@ -90,6 +97,7 @@ export const moreProjects = [
     type: 'VR health experience · Semester Project',
     summary: 'Making hearing risk feel real · knowledge rose 4.6 points in the VR group',
     bg: 'linear-gradient(160deg, var(--card-decibel-from) 0%, var(--card-decibel-to) 100%)', // tilted card on the project page
+    tint: 'var(--hero-tint-decibel)',
     link: '#dangers-of-decibel',
   },
 ];

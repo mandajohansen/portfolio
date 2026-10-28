@@ -134,6 +134,14 @@
   --card-decibel-to: #8CC9A2;
   --card-decibel-to: #c97880;
 
+  /* Tilted card behind the photo on a project's page, when it should differ from the "-to" colour */
+  --hero-tint-study-card: #b9a5d6;
+  --hero-tint-relesys: #eba87a;
+  --hero-tint-pandas: #9fbde0;
+  --hero-tint-exhibit: #cdb894;
+  --hero-tint-maze-chase: #7cc4bd;
+  --hero-tint-decibel: #6f9a72;
+
   /* Marquee role colours, in the order of the roles */
   --marquee-1: #b24a55;
   --marquee-2: #666f2e;
