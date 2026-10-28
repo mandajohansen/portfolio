@@ -649,14 +649,22 @@ button {
     font-size: 14px;
   }
 
+  /* Second row: tabs in the middle, back arrow on the left edge */
   .header__center {
     grid-column: 1 / -1;
     grid-row: 2;
-    justify-self: center;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+  }
+
+  .header__center .tabs {
+    grid-column: 2;
   }
 
   .header__back {
     display: grid;
+    grid-column: 1;
+    justify-self: start;
   }
 
   .header__burger {
@@ -1346,6 +1354,11 @@ button {
 @media (max-width: 860px) {
   .back-link {
     display: none;
+  }
+
+  /* More room between the header and the case study hero */
+  .cs__intro {
+    padding-top: 72px;
   }
 }
 
