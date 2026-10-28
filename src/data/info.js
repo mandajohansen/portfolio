@@ -178,4 +178,4 @@ export const contact = {
   resume: 'resume.pdf',
 };
 
-export const footerText = 'UX/UI and Digital designer.';
+export const footerText = 'UX/UI and Product Designer who loves creating Digital experiences';

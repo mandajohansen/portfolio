@@ -19,15 +19,23 @@ export default function App() {
   const [route, setRoute] = useState(routeFromHash);
 
   useEffect(() => {
+    // Google Analytics ignores everything after #, so each page is sent as its own path
+    // (…/portfolio/spyrun, …/portfolio/info). The tag in index.html doesn't count pages itself.
+    const trackPage = () => {
+      const page = routeFromHash();
+      window.gtag?.('event', 'page_view', {
+        page_title: page,
+        page_location: `${window.location.origin}${window.location.pathname}${page}`,
+      });
+    };
+
     const onHash = () => {
       setRoute(routeFromHash());
       window.scrollTo(0, 0);
-      window.gtag?.('event', 'page_view', {
-  page_title: routeFromHash(),
-  page_location: window.location.href,
-});
-
+      trackPage();
     };
+
+    trackPage(); // the page the visit starts on
     window.addEventListener('hashchange', onHash);
     return () => window.removeEventListener('hashchange', onHash);
   }, []);

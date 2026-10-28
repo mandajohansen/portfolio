@@ -492,7 +492,7 @@ export const caseStudies = {
         title: 'Methods',
         text: 'User-centered design, interviews, observation, talk-aloud, usability testing, iterative design',
       },
-      { icon: 'pin', title: 'Context', text: 'Tablet serious game, five-person group, Bachelor Project' },
+      { icon: 'pin', title: 'Context', text: 'Tablet serious game, five-person group, Bachelor Project, Spring 2024' },
     ],
 
     sections: [
