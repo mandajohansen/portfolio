@@ -8,7 +8,7 @@ export const about = {
   greeting: 'Hi, I’m',
   name: 'Amanda',
   subtitle: 'I design digital experiences that connect user needs, product thinking and practical implementation.', body: [
-    'I’m a UX/UI and digital designer interested in turning complex needs into clear, thoughtful experiences across mobile and web. My work spans user research, interaction design, visual design, prototyping and development, and I enjoy projects where understanding people is just as important as designing the final interface.',
+    'I’m a UX/UI and product designer interested in turning complex needs into clear, thoughtful experiences across mobile and web. My work spans user research, interaction design, visual design, prototyping and development, and I enjoy projects where understanding people is just as important as designing the final interface.',
     'My interests span UX, UI, product and digital design, alongside project coordination and management in IT-focused teams. I’m especially drawn to work that makes everyday tasks easier, learning more engaging, or information easier to understand.',
   ],
   tags: ['UX/UI', 'Product design', 'Digital design', 'User research', 'Project coordination'],

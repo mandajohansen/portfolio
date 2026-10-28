@@ -7,7 +7,8 @@
 //        --card-...-from / --card-...-to at the top of src/index.css.
 // link:  where the arrow button goes (case study URL, PDF, etc.).
 // summary: up to three sentences under the title: the problem, what was designed
-//        (with one result, e.g. a SUS score) and what you personally did.
+//        (with one result) and what you personally did. Only the thesis uses a SUS score;
+//        the others use a qualitative result, so the cards don't all read the same.
 // wide:  the card sits full width above the other project cards.
 
 export const experience = [
@@ -40,7 +41,7 @@ export const projects = [
     title: 'SpyRun: A listening game for children with APD',
     subtitle: 'Semester Project · Published app',
     summary:
-      'Transforming repetitive auditory training into an engaging endless-runner game for children with APD, combining research, game UX, and user testing in a five-person team to create a published game that achieved a SUS score of 82.73.',
+      'Transforming repetitive auditory training into an engaging endless-runner game for children with APD, combining research, game UX, and user testing in a five-person team. Children with APD preferred it to their usual exercises, and Materiale Centeret took it on to publish.',
     tag: 'Mobile Game',
     image: 'images/spyruncard.png',
     bg: 'linear-gradient(160deg, var(--card-spyrun-from) 0%, var(--card-spyrun-to) 100%)',
@@ -51,7 +52,7 @@ export const projects = [
     title: 'Digital Study Card: The university ID card as an app',
     subtitle: 'Semester Project',
     summary:
-      'Transforming traditional student ID cards into a digital solution with NFC access and clear room permissions, combining UX/UI design and user testing to create a prototype that achieved a SUS score of 88.52.',
+      'Transforming traditional student ID cards into a digital solution with NFC access and clear room permissions, combining UX/UI design and user testing. In the final test, all six students said they would choose the app over their physical card.',
     tag: 'Mobile Application',
     image: 'images/digitalcardcard.png',
     bg: 'linear-gradient(160deg, var(--card-study-card-from) 0%, var(--card-study-card-to) 100%)',
@@ -65,7 +66,7 @@ export const moreProjects = [
   {
     title: 'VR Driving Simulator',
     type: 'VR learning tool · Published at ICISS’24',
-    summary: 'Interactive traffic scenarios for driving theory students · SUS 77.5',
+    summary: 'Interactive traffic scenarios for driving theory students · instructors backed it as a supplement to theory lessons',
     bg: 'linear-gradient(160deg, var(--card-vr-driving-from) 0%, var(--card-vr-driving-to) 100%)',
     link: '#vr-driving-simulator',
   },
