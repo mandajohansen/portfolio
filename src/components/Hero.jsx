@@ -9,11 +9,14 @@ const HERO = {
   typed: ['UX/UI and product designer'],
   // Set to null to hide the green "available" pill.
   status: 'Open to new opportunities',
+  // Sentence 1 (title): what you do. Sentence 2 (lead): the experience that backs it up.
   title: [
-    'I turn complex needs',
-    'into thoughtful digital',
-    'products and experiences.',
-  ],  // The job titles you're looking for, shown as bubbles under the headline.
+    'I take digital products',
+    'from first idea to a tested,',
+    'working solution.',
+  ],
+  lead: 'I’ve taken 8+ projects from start to finish, from user research and design to development and testing with real users, across mobile apps, games and VR.',
+  // The job titles you're looking for, shown as bubbles under the headline.
   rolesLabel: 'Looking for roles as',
   roles: ['UX/UI Designer', 'Product Designer', 'Project Coordinator'],
 
@@ -142,6 +145,8 @@ export default function Hero() {
             </span>
           ))}
         </h1>
+
+        {HERO.lead && <p className="hero__lead">{HERO.lead}</p>}
 
         {HERO.rolesLabel && <p className="hero__roles-label">{HERO.rolesLabel}</p>}
         <ul className="tags hero__proof">

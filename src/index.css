@@ -3702,6 +3702,16 @@ button {
   content: ' ';
 }
 
+/* The sentence under the headline: experience that backs it up */
+.hero__lead {
+  max-width: 34em;
+  margin-top: 20px;
+  font-size: 17px;
+  line-height: 1.6;
+  color: var(--muted);
+  animation: hero-in 0.9s ease 0.45s both;
+}
+
 /* Job titles as bubbles, like on the Info page */
 .hero__roles-label {
   margin-top: 26px;
@@ -3944,6 +3954,7 @@ button {
 
   .hero__intro,
   .hero__line,
+  .hero__lead,
   .hero__roles-label,
   .hero__proof,
   .hero__actions,
