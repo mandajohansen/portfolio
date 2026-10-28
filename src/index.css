@@ -3877,6 +3877,10 @@ body {
     display: none;
   }
 
+  .hero__content {
+    padding-block-start: 24px;
+  }
+
   .hero__portrait {
     width: min(100%, 320px);
     margin-top: 10px;
