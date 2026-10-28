@@ -6,14 +6,21 @@
 // bg:    the soft background colour behind the image. The colours are set as
 //        --card-...-from / --card-...-to at the top of src/index.css.
 // link:  where the arrow button goes (case study URL, PDF, etc.).
-// summary: one line under the title: what it is, who it was for, one result.
+// details: the labelled lines under the title. Keep each to about one line.
+//        problem:  what challenge the project addressed
+//        solution: what was designed (put one result at the end, e.g. a SUS score)
+//        role:     what you personally did, and the team size
 // wide:  the card sits full width above the other project cards.
 
 export const experience = [
   {
     title: 'Digital Design Intern',
     subtitle: 'Relesys A/S',
-    summary: 'Branded mobile apps for frontline staff across many brands · prototypes in 2–3 days',
+    details: {
+      problem: 'Every client brand needs its own app, built on one shared platform.',
+      solution: 'Branded designs for new client apps and fixes to live ones, with Figma prototypes in 2–3 days.',
+      role: 'Figma prototypes, CMS setup and CSS/LESS styling, with Design, Sales and Client Success.',
+    },
     tag: 'Mobile applications',
     image: 'images/Relesyscard.png',
     bg: 'linear-gradient(135deg, var(--card-relesys-from) 0%, var(--card-relesys-to) 100%)',
@@ -23,9 +30,13 @@ export const experience = [
 
 export const projects = [
   {
-    title: 'Internal Communication app',
-    subtitle: 'Master’s Thesis - Case Study',
-    summary: 'Mobile app for non-desk retail staff · SUS 79.4 · 5-day field test',
+    title: 'Internal Communication: A mobile app for retail staff',
+    subtitle: 'Master’s Thesis',
+    details: {
+      problem: 'Store communication was scattered across Messenger, email, a whiteboard and word of mouth.',
+      solution: 'One app with role-based news, shift handovers and a knowledge bank · SUS 79.4, 5-day field test.',
+      role: 'Solo project: research, UX/UI design, React Native development and testing.',
+    },
     tag: 'Mobile Application',
     image: 'images/Thesiscard.png',
     bg: 'linear-gradient(160deg, var(--card-thesis-from) 0%, var(--card-thesis-to) 100%)',
@@ -34,9 +45,13 @@ export const projects = [
   },
 
   {
-    title: 'SpyRun',
-    subtitle: 'Semester Project',
-    summary: 'Published app · Auditory training game for children with APD · SUS 82.73',
+    title: 'SpyRun: A listening game for children with APD',
+    subtitle: 'Semester Project · Published app',
+    details: {
+      problem: 'Auditory training relies on repetition, which makes practice feel monotonous for children.',
+      solution: 'An endless-runner game with spatial audio and listening tasks built in · SUS 82.73.',
+      role: 'UX research, game UX, accessibility and user testing · team of 5.',
+    },
     tag: 'Mobile Game',
     image: 'images/spyruncard.png',
     bg: 'linear-gradient(160deg, var(--card-spyrun-from) 0%, var(--card-spyrun-to) 100%)',
@@ -44,9 +59,13 @@ export const projects = [
   },
 
   {
-    title: 'Digital Study Card',
+    title: 'Digital Study Card: The university ID card as an app',
     subtitle: 'Semester Project',
-    summary: 'The university study card as an app · 235 survey responses · 6/6 preferred it',
+    details: {
+      problem: 'Students forgot their cards and only found out about missing room access at a locked door.',
+      solution: 'An app with NFC entry, visible room permissions and access requests · SUS 88.52.',
+      role: 'Designed much of the app in Figma, ran the user tests and led the Scrum process · team of 7.',
+    },
     tag: 'Mobile Application',
     image: 'images/digitalcardcard.png',
     bg: 'linear-gradient(160deg, var(--card-study-card-from) 0%, var(--card-study-card-to) 100%)',
@@ -65,28 +84,28 @@ export const moreProjects = [
     link: '#vr-driving-simulator',
   },
   {
-    title: 'Pandas Fonologiske Lege',
+    title: 'Pandas Fonologiske Lege: A speech-sound game for children',
     type: 'Tablet game · Bachelor’s Project',
     summary: 'Phonological awareness training for kindergarten children, tested with real users',
     bg: 'linear-gradient(160deg, var(--card-pandas-from) 0%, var(--card-pandas-to) 100%)',
     link: '#pandas-fonologiske-lege',
   },
   {
-    title: 'Interactive Exhibit',
+    title: 'Interactive Exhibit: A card-matching game at Thorvaldsens Museum',
     type: 'Museum installation · Semester Project',
-    summary: 'A social, physical-digital exhibit at Thorvaldsens Museum · 23 visitors tested it',
+    summary: 'A social, physical-digital learning experience for museum visitors · 23 visitors tested it',
     bg: 'linear-gradient(160deg, var(--card-exhibit-from) 0%, var(--card-exhibit-to) 100%)',
     link: '#interactive-exhibit',
   },
   {
-    title: 'Maze Chase',
+    title: 'Maze Chase: A multiplayer VR game',
     type: 'Multiplayer VR game · Semester Project',
     summary: 'Dynamic difficulty that balances players through the environment · 24 players',
     bg: 'linear-gradient(160deg, var(--card-maze-chase-from) 0%, var(--card-maze-chase-to) 100%)',
     link: '#maze-chase',
   },
   {
-    title: 'Dangers of Decibel',
+    title: 'Dangers of Decibel: A VR experience about hearing loss',
     type: 'VR health experience · Semester Project',
     summary: 'Making hearing risk feel real · knowledge rose 4.6 points in the VR group',
     bg: 'linear-gradient(160deg, var(--card-decibel-from) 0%, var(--card-decibel-to) 100%)',

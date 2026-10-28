@@ -557,18 +557,40 @@ button {
   color: var(--white);
 }
 
-/* Footer grows with the summary line instead of clipping it */
+/* Footer grows with the Problem / Solution / My role lines instead of clipping them */
 .card__footer {
   height: auto;
   min-height: 136px;
   padding-block: 20px;
 }
 
-.card__summary {
-  margin-top: 8px;
+/* Problem / Solution / My role lines under the title */
+.card__details {
+  display: grid;
+  gap: 4px;
+  margin: 12px 0 0;
   font-size: 15px;
   line-height: 1.45;
   color: var(--muted);
+}
+
+.card__detail {
+  display: grid;
+  grid-template-columns: 82px minmax(0, 1fr);
+  gap: 12px;
+}
+
+.card__detail dt {
+  padding-top: 2px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.card__detail dd {
+  margin: 0;
 }
 
 /* Space between the wide featured card and the two cards under it */
@@ -652,8 +674,21 @@ button {
     padding-block: 16px;
   }
 
-  .card__summary {
+  .card__details {
     font-size: 13px;
+  }
+
+  .card__detail {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .card__detail + .card__detail {
+    margin-top: 6px;
+  }
+
+  .card__detail dt {
+    font-size: 11px;
   }
 
   .work .card--wide+.grid {
@@ -762,14 +797,22 @@ button {
     gap: 24px;
   }
 
+  /* Picture on top, text underneath, so the Problem / Solution / My role lines don't cover the picture */
   .card,
   .card--wide {
     aspect-ratio: auto;
-    height: 420px;
+    height: auto;
     border-radius: 22px;
   }
 
+  .card__image {
+    position: relative;
+    height: auto;
+    aspect-ratio: 4 / 3;
+  }
+
   .card__footer {
+    position: relative;
     padding-inline: 18px;
   }
 
