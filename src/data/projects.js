@@ -6,9 +6,8 @@
 // bg:    the soft background colour behind the image. The colours are set as
 //        --card-...-from / --card-...-to at the top of src/index.css.
 // link:  where the arrow button goes (case study URL, PDF, etc.).
-// summary: up to three sentences under the title: the problem, what was designed
-//        (with one result) and what you personally did. Only the thesis uses a SUS score;
-//        the others use a qualitative result, so the cards don't all read the same.
+// summary: one short sentence under the title: what it is and one result.
+//        The details belong in the case study, so keep it to a single line on the card.
 // wide:  the card sits full width above the other project cards.
 
 export const experience = [
@@ -16,8 +15,8 @@ export const experience = [
     title: 'Digital Design Intern',
     subtitle: 'Relesys A/S',
     summary:
-      'Transforming a shared app platform into unique, branded experiences through rapid prototyping, thoughtful design, and hands-on technical implementation.',
-    tag: 'Mobile applications',
+      'Designed and built branded apps for retail, hospitality and grocery clients.',
+    tag: 'Mobile Application',
     image: 'images/Relesyscard.png',
     bg: 'linear-gradient(135deg, var(--card-relesys-from) 0%, var(--card-relesys-to) 100%)',
     link: '#relesys',
@@ -29,7 +28,7 @@ export const projects = [
     title: 'Internal Communication: A mobile app for retail staff',
     subtitle: 'Master’s Thesis',
     summary:
-      'Transforming fragmented retail communication into one centralized app for news, shift handovers, and shared knowledge, independently researched, designed, and developed in React Native, achieving a SUS score of 79.4 through real-world store testing.',
+      'One app for news, shift handovers and know-how, built on my own and rated 79.4 on SUS.',
     tag: 'Mobile Application',
     image: 'images/Thesiscard.png',
     bg: 'linear-gradient(160deg, var(--card-thesis-from) 0%, var(--card-thesis-to) 100%)',
@@ -41,7 +40,7 @@ export const projects = [
     title: 'SpyRun: A listening game for children with APD',
     subtitle: 'Semester Project · Published app',
     summary:
-      'Transforming repetitive auditory training into an engaging endless-runner game for children with APD, combining research, game UX, and user testing in a five-person team. Children with APD preferred it to their usual exercises, and Materiale Centeret took it on to publish.',
+      'Listening exercises turned into a game the children preferred.',
     tag: 'Mobile Game',
     image: 'images/spyruncard.png',
     bg: 'linear-gradient(160deg, var(--card-spyrun-from) 0%, var(--card-spyrun-to) 100%)',
@@ -49,14 +48,14 @@ export const projects = [
   },
 
   {
-    title: 'Digital Study Card: The university ID card as an app',
-    subtitle: 'Semester Project',
+    title: 'VR Driving Simulator: Traffic scenarios for learners',
+    subtitle: 'Semester Project · Published paper',
     summary:
-      'Transforming traditional student ID cards into a digital solution with NFC access and clear room permissions, combining UX/UI design and user testing. In the final test, all six students said they would choose the app over their physical card.',
-    tag: 'Mobile Application',
-    image: 'images/digitalcardcard.png',
-    bg: 'linear-gradient(160deg, var(--card-study-card-from) 0%, var(--card-study-card-to) 100%)',
-    link: '#digital-study-card',
+      'Driving theory you step into, rated 77.5 on SUS by learner drivers.',
+    tag: 'VR Learning Tool',
+    image: 'images/drivingcard.png',
+    bg: 'linear-gradient(160deg, var(--card-vr-driving-from) 0%, var(--card-vr-driving-to) 100%)',
+    link: '#vr-driving-simulator',
   },
 ];
 
@@ -64,30 +63,30 @@ export const projects = [
 // type: the small orange line under the title.
 export const moreProjects = [
   {
-    title: 'VR Driving Simulator',
-    type: 'VR learning tool · Published at ICISS’24',
-    summary: 'Interactive traffic scenarios for driving theory students · instructors backed it as a supplement to theory lessons',
-    bg: 'linear-gradient(160deg, var(--card-vr-driving-from) 0%, var(--card-vr-driving-to) 100%)',
-    link: '#vr-driving-simulator',
+    title: 'Digital Study Card: The university ID card as an app',
+    type: 'Mobile app · Semester Project',
+    summary: 'NFC campus access and clear room permissions in one app · all six students in the final test preferred it to their physical card',
+    bg: 'linear-gradient(160deg, var(--card-study-card-from) 0%, var(--card-study-card-to) 100%)',
+    link: '#digital-study-card',
   },
   {
     title: 'Pandas Fonologiske Lege: A speech-sound game for children',
     type: 'Tablet game · Bachelor’s Project',
-    summary: 'Phonological awareness training for kindergarten children, tested with real users',
+    summary: 'Speech-sound training for kindergarten children · a speech therapist found it fit for beginner and intermediate training',
     bg: 'linear-gradient(160deg, var(--card-pandas-from) 0%, var(--card-pandas-to) 100%)',
     link: '#pandas-fonologiske-lege',
   },
   {
     title: 'Interactive Exhibit: A card-matching game at Thorvaldsens Museum',
     type: 'Museum installation · Semester Project',
-    summary: 'A social, physical-digital learning experience for museum visitors · 23 visitors tested it',
+    summary: 'Physical cards and computer vision for museum visitors · every visitor completed all the cards, two in three played in groups',
     bg: 'linear-gradient(160deg, var(--card-exhibit-from) 0%, var(--card-exhibit-to) 100%)',
     link: '#interactive-exhibit',
   },
   {
     title: 'Maze Chase: A multiplayer VR game',
     type: 'Multiplayer VR game · Semester Project',
-    summary: 'Dynamic difficulty that balances players through the environment · 24 players',
+    summary: 'A maze that rebuilds itself to balance players of different skill · outcomes evened out, but flow did not rise',
     bg: 'linear-gradient(160deg, var(--card-maze-chase-from) 0%, var(--card-maze-chase-to) 100%)',
     link: '#maze-chase',
   },

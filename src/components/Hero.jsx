@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import Arrow from './Arrow.jsx';
+import HeroWindow from './HeroWindow.jsx';
 
 // Edit the text at the top of the front page here.
 const HERO = {
@@ -18,9 +19,8 @@ const HERO = {
   rolesLabel: 'Looking for roles as',
   roles: ['UX/UI Designer', 'Product Designer', 'Project Coordinator'],
 
-  // Your photo on the right, with its sticker and spinning badge.
-  photo: 'images/me.jpg',
-  sticker: 'Hi, I’m Amanda!',
+  // The animated window on the right (HeroWindow.jsx), with its sticker and spinning badge.
+  sticker: 'Hello, this is how I work',
   badge: ' OPEN TO WORK • OPEN TO WORK • ',
 };
 
@@ -54,41 +54,11 @@ function useTypewriter(words) {
   return text;
 }
 
-// Photo in a scalloped frame with a sticker, a spinning badge and a hand-drawn arrow pointing at it.
+// The animated window with a sticker and a spinning badge.
 function Portrait() {
   return (
     <div className="hero__portrait">
-      <svg width="0" height="0" aria-hidden="true" style={{ position: 'absolute' }}>
-        <clipPath id="scallop" clipPathUnits="objectBoundingBox">
-          <rect x="0.1" y="0.08" width="0.8" height="0.84" />
-          {[0.2, 0.4, 0.6, 0.8].map((x) => (
-            <circle key={`t${x}`} cx={x} cy="0.105" r="0.105" />
-          ))}
-          {[0.2, 0.4, 0.6, 0.8].map((x) => (
-            <circle key={`b${x}`} cx={x} cy="0.895" r="0.105" />
-          ))}
-          {[0.25, 0.42, 0.58, 0.75].map((y) => (
-            <circle key={`l${y}`} cx="0.105" cy={y} r="0.105" />
-          ))}
-          {[0.25, 0.42, 0.58, 0.75].map((y) => (
-            <circle key={`r${y}`} cx="0.895" cy={y} r="0.105" />
-          ))}
-        </clipPath>
-      </svg>
-
-      <svg className="hero__loop" viewBox="0 0 160 90" fill="none" aria-hidden="true">
-        <path
-          d="M2 30c30-6 58-2 70 14 10 14-4 30-16 22s2-30 22-32c22-2 44 10 68 26"
-          stroke="currentColor"
-          strokeWidth="1.6"
-          strokeLinecap="round"
-        />
-        <path d="M140 52l8 10-12 2" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
-      </svg>
-
-      <div className="hero__photo">
-        <img src={HERO.photo} alt="Amanda Johansen" />
-      </div>
+      <HeroWindow />
 
       {HERO.sticker && <span className="hero__sticker">{HERO.sticker}</span>}
 

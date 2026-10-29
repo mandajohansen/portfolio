@@ -3600,15 +3600,15 @@ button {
 }
 
 /* ---------- Hero (front page) ----------
-   Text on the left, a scalloped photo with a sticker and spinning badge on the right.
+   Text on the left, an animated app window with a sticker and spinning badge on the right.
    Height: change min-height (how tall it is at least) and padding (space above/below). */
 
 .hero {
   position: relative;
   display: grid;
-  grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   align-items: center;
-  gap: 48px;
+  gap: 56px;
   min-height: min(680px, calc(100svh - 60px));
   padding: 140px calc(var(--gutter) + 50px) 70px;
   overflow: hidden;
@@ -3751,48 +3751,25 @@ button {
   transform: translateY(3px);
 }
 
-/* Photo in a scalloped frame (the shape is drawn in Hero.jsx) */
+/* Right side: the animated window (HeroWindow.jsx) with its sticker and badge */
 .hero__portrait {
   position: relative;
-  justify-self: center;
-  width: min(100%, 400px);
+  justify-self: end;
+  width: min(100%, 680px);
   animation: hero-in 1s ease 0.35s both;
 }
 
-.hero__photo {
-  position: relative;
-  aspect-ratio: 4 / 4;
-  clip-path: url(#scallop);
-  background: var(--tint-portrait);
-}
-
-.hero__photo img {
-  position: absolute;
-  inset: 0;
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center 40%;
-  transform: scale(1.01);
-  transition: transform 0.6s ease;
-}
-
-.hero__portrait:hover .hero__photo img {
-  transform: scale(1.05);
-}
-
-/* "Hi, I'm Amanda!" sticker */
+/* "Hello, this is how I work" sticker */
 .hero__sticker {
   position: absolute;
-  top: 2%;
-  left: 4%;
+  top: -12%;
+  left: -4%;
   z-index: 2;
-  padding: 6px 14px;
+  padding: 9px 20px;
   background: var(--peach-light);
   box-shadow: 0 6px 16px rgb(var(--umber-rgb) / 0.14);
   font-family: var(--serif);
-  font-size: 16px;
+  font-size: 20px;
   color: var(--ink);
   transform: rotate(-6deg);
   transition: transform 0.3s ease;
@@ -3801,9 +3778,9 @@ button {
 .hero__sticker::after {
   content: '';
   position: absolute;
-  left: 22px;
-  bottom: -8px;
-  border: 8px solid transparent;
+  left: 28px;
+  bottom: -10px;
+  border: 10px solid transparent;
   border-top-color: var(--peach-light);
   border-bottom: 0;
 }
@@ -3815,8 +3792,8 @@ button {
 /* Round badge: only the text ring spins, so the star stays steady */
 .hero__badge {
   position: absolute;
-  left: -6%;
-  bottom: 12%;
+  top: -13%;
+  right: -5%;
   z-index: 2;
   width: 108px;
   height: 108px;
@@ -3843,27 +3820,446 @@ button {
   fill: var(--peach-light);
 }
 
-/* Loopy hand-drawn arrow from the text to the photo */
-.hero__loop {
-  position: absolute;
-  top: 34%;
-  left: -46%;
-  width: 190px;
-  color: var(--ink);
-  opacity: 0.8;
+/* ---------- Hero animated window (HeroWindow.jsx) ----------
+   A frosted glass window, like the project cards and side menu, that floats and
+   loops through Research, Design, Build and Test.
+   Tilt: change the rotateX/rotateY on .hw. Float: change hw-float. */
+
+.hw-stage {
+  perspective: 1600px;
+  animation: hw-float 7s ease-in-out infinite;
 }
 
-/* Smaller arrow on smaller laptops (the tip stays in the same spot), hidden when there's no room */
-@media (max-width: 1525px) {
-  .hero__loop {
-    left: auto;
-    right: calc(100% + 8px);
-    width: 120px;
+.hw {
+  padding: 0 12px 12px;
+  border: 1px solid rgb(var(--white-rgb) / 0.75);
+  border-radius: 28px;
+  background: rgb(var(--white-rgb) / 0.5);
+  box-shadow:
+    0 30px 60px -22px rgb(var(--umber-rgb) / 0.28),
+    0 8px 32px rgb(var(--clay-rgb) / 0.08),
+    inset 0 1px 0 rgb(var(--white-rgb) / 0.8);
+  backdrop-filter: blur(18px) saturate(1.15);
+  -webkit-backdrop-filter: blur(18px) saturate(1.15);
+  transform: rotateY(-9deg) rotateX(4deg);
+  transition: transform 0.6s cubic-bezier(0.2, 0.7, 0.2, 1), box-shadow 0.6s ease;
+}
+
+/* On hover it straightens and lifts, like the project cards */
+.hero__portrait:hover .hw {
+  transform: rotateY(-2deg) rotateX(1deg) translateY(-6px);
+  box-shadow:
+    0 36px 70px -22px rgb(var(--umber-rgb) / 0.32),
+    0 8px 32px rgb(var(--clay-rgb) / 0.1),
+    inset 0 1px 0 rgb(var(--white-rgb) / 0.8);
+}
+
+/* Title bar: three soft dots and the file name in a pill */
+.hw__bar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 48px;
+}
+
+.hw__dots {
+  position: absolute;
+  left: 10px;
+  display: flex;
+  gap: 7px;
+}
+
+.hw__dots i {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: var(--step-1);
+}
+
+.hw__dots i:nth-child(2) {
+  background: var(--step-2);
+}
+
+.hw__dots i:nth-child(3) {
+  background: var(--step-3);
+}
+
+.hw__file {
+  padding: 5px 22px;
+  border: 1px solid rgb(var(--white-rgb) / 0.75);
+  border-radius: 999px;
+  background: rgb(var(--white-rgb) / 0.75);
+  font-style: italic;
+  font-size: 13px;
+  color: var(--ink);
+  animation: hw-fade 0.4s ease both;
+}
+
+.hw__body {
+  display: grid;
+  grid-template-columns: 27% 1fr;
+  gap: 10px;
+}
+
+/* The four steps, as pills like the side menu; the active one fills its progress line */
+.hw__steps {
+  display: grid;
+  align-content: start;
+  gap: 4px;
+  margin: 0;
+  padding: 8px;
+  border: 1px solid rgb(var(--white-rgb) / 0.75);
+  border-radius: 20px;
+  background: rgb(var(--white-rgb) / 0.42);
+  list-style: none;
+}
+
+.hw__steps li {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 10px;
+  border-radius: 999px;
+  font-size: 13px;
+  color: var(--text-faint);
+  transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+}
+
+.hw__steps li.is-active {
+  background: rgb(var(--white-rgb) / 0.9);
+  box-shadow: 0 2px 10px rgb(var(--clay-rgb) / 0.1);
+  color: var(--ink);
+}
+
+/* Numbered circle in the step colours, like the process steps in the case studies */
+.hw__num {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--c);
+  font-family: var(--serif);
+  font-size: 11px;
+  color: var(--ink);
+}
+
+.hw__progress {
+  position: absolute;
+  left: 40px;
+  right: 14px;
+  bottom: 4px;
+  height: 1.5px;
+  border-radius: 2px;
+  background: var(--accent);
+  transform-origin: left;
+  animation: hw-gx var(--scene) linear both;
+}
+
+.hw__canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 1px solid rgb(var(--white-rgb) / 0.8);
+  border-radius: 20px;
+  background-color: rgb(var(--glow-cream-rgb) / 0.9);
+  background-image: radial-gradient(rgb(var(--umber-rgb) / 0.14) 1px, transparent 1.2px);
+  background-size: 14px 14px;
+}
+
+/* Building blocks: each element waits for its --d delay, then animates in */
+.hw-pop,
+.hw-gx,
+.hw-gy,
+.hw-ripple {
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+.hw-pop {
+  animation: hw-pop 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) var(--d, 0s) both;
+}
+
+.hw-gx {
+  transform-origin: left center;
+  animation: hw-gx 0.6s ease var(--d, 0s) both;
+}
+
+.hw-gy {
+  transform-origin: center bottom;
+  animation: hw-gy 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) var(--d, 0s) both;
+}
+
+.hw-up {
+  animation: hw-up 0.55s ease var(--d, 0s) both;
+}
+
+.hw-fade {
+  animation: hw-fade 0.4s ease var(--d, 0s) both;
+}
+
+/* A line that draws itself (the element needs pathLength="1") */
+.hw-draw {
+  stroke-dasharray: 1;
+  animation: hw-draw 0.9s ease var(--d, 0s) both;
+}
+
+/* The click flash stays hidden before and after */
+.hw-ripple {
+  opacity: 0;
+  fill: rgb(var(--accent-rgb) / 0.35);
+  animation: hw-ripple 0.6s ease-out var(--d, 0s) forwards;
+}
+
+/* Surfaces (before the colours, so a colour class can override their fill) */
+.hw-phone {
+  fill: var(--white);
+  stroke: rgb(var(--umber-rgb) / 0.14);
+  filter: drop-shadow(0 6px 10px rgb(var(--umber-rgb) / 0.12));
+}
+
+/* Survey scale circles */
+.hw-scale {
+  fill: var(--white);
+  stroke: rgb(var(--umber-rgb) / 0.25);
+}
+
+/* Iterate: the hand-drawn first version */
+.hw-sketch {
+  fill: none;
+  stroke: rgb(var(--umber-rgb) / 0.45);
+  stroke-width: 1.2;
+  stroke-dasharray: 4 3;
+  stroke-linecap: round;
+}
+
+/* Colours */
+.hw-c-ink { fill: var(--header-name); }
+.hw-c-muted { fill: var(--text-grey); }
+.hw-c-accent { fill: var(--accent); }
+.hw-c-peach { fill: var(--peach-light); }
+.hw-c-sage { fill: var(--sage); }
+.hw-c-yellow { fill: var(--step-2); }
+.hw-c-blue { fill: var(--step-4); }
+.hw-c-cream { fill: var(--placeholder-1); }
+.hw-c-white { fill: var(--white); }
+.hw-c-chosen { fill: var(--chosen); }
+.hw-c-line { fill: rgb(var(--umber-rgb) / 0.2); }
+
+/* Changes colour from --from to its own colour at --t (picked paper, picked answer) */
+.hw-shift {
+  animation: hw-shift 0.35s ease var(--t, 0s) both;
+}
+
+/* Thin outline: the search icon */
+.hw-stroke {
+  fill: none;
+  stroke: var(--header-name);
+  stroke-width: 1.6;
+  stroke-linecap: round;
+}
+
+/* Arrows: between versions, and the responsive width arrow */
+.hw-connector {
+  fill: none;
+  stroke: rgb(var(--accent-rgb) / 0.55);
+  stroke-width: 1.2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.hw-connector--strong {
+  stroke: var(--accent);
+  stroke-width: 1.6;
+}
+
+.hw-scribble,
+.hw-tick {
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.hw-scribble {
+  stroke: var(--accent);
+  stroke-width: 2;
+}
+
+.hw-tick {
+  stroke: var(--header-name);
+  stroke-width: 1.8;
+}
+
+.hw-tick--light {
+  stroke: var(--white);
+  stroke-width: 2.2;
+}
+
+/* The red recording dot in the interview pulses */
+.hw-rec {
+  animation:
+    hw-pop 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) var(--d) both,
+    hw-blink 1.2s ease-in-out 0.7s infinite;
+}
+
+/* Design: the outline that draws around the heading on every screen */
+.hw-outline {
+  fill: none;
+  stroke: var(--accent);
+  stroke-width: 1.4;
+}
+
+/* Small pills on top of a line (Responsive, Round 3) */
+.hw-pill {
+  stroke: rgb(var(--accent-rgb) / 0.35);
+}
+
+/* Quotes and notes: the italic serif used for the headline */
+.hw-quote {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 10.5px;
+  fill: var(--header-name);
+}
+
+.hw-type {
+  font-family: var(--serif);
+  font-size: 26px;
+  fill: var(--header-name);
+}
+
+
+/* Small words inside the drawing */
+.hw-label {
+  font-family: var(--sans);
+  font-size: 8.5px;
+  font-weight: 500;
+  fill: var(--header-name);
+}
+
+.hw-label--light {
+  fill: var(--white);
+}
+
+.hw-label--muted {
+  font-weight: 400;
+  fill: var(--text-grey);
+}
+
+.hw-label--accent {
+  fill: var(--accent);
+}
+
+/* The cursor follows its own path in each step */
+.hw-cursor path {
+  fill: var(--header-name);
+  stroke: var(--white);
+  stroke-width: 1.2;
+  stroke-linejoin: round;
+}
+
+.hw-cursor {
+  animation: var(--scene) ease-in-out both;
+}
+
+.hw-cursor--research { animation-name: hw-cur-research; }
+.hw-cursor--design { animation-name: hw-cur-design; }
+.hw-cursor--test { animation-name: hw-cur-test; }
+.hw-cursor--iterate { animation-name: hw-cur-iterate; }
+
+@keyframes hw-float {
+  0%, 100% { transform: translateY(-6px); }
+  50% { transform: translateY(6px); }
+}
+
+@keyframes hw-pop {
+  from { opacity: 0; transform: scale(0.3); }
+  to { opacity: 1; transform: none; }
+}
+
+@keyframes hw-gx {
+  from { transform: scaleX(0); }
+}
+
+@keyframes hw-gy {
+  from { transform: scaleY(0); }
+}
+
+@keyframes hw-up {
+  from { opacity: 0; transform: translateY(10px); }
+}
+
+@keyframes hw-fade {
+  from { opacity: 0; }
+}
+
+@keyframes hw-draw {
+  from { stroke-dashoffset: 1; }
+  to { stroke-dashoffset: 0; }
+}
+
+@keyframes hw-ripple {
+  0% { opacity: 1; transform: scale(0.2); }
+  100% { opacity: 0; transform: scale(1.7); }
+}
+
+@keyframes hw-shift {
+  from { fill: var(--from); }
+}
+
+@keyframes hw-blink {
+  50% { opacity: 0.3; }
+}
+
+@keyframes hw-cur-research {
+  0% { transform: translate(318px, 226px); }
+  16%, 22% { transform: translate(60px, 31px); }
+  34%, 40% { transform: translate(80px, 78px); }
+  50% { transform: translate(190px, 120px); }
+  66% { transform: translate(300px, 120px); }
+  82%, 100% { transform: translate(318px, 226px); }
+}
+
+@keyframes hw-cur-design {
+  0% { transform: translate(330px, 230px); }
+  50%, 60% { transform: translate(40px, 198px); }
+  84%, 100% { transform: translate(150px, 230px); }
+}
+
+@keyframes hw-cur-test {
+  0% { transform: translate(300px, 226px); }
+  34%, 44% { transform: translate(290px, 70px); }
+  70%, 100% { transform: translate(326px, 228px); }
+}
+
+@keyframes hw-cur-iterate {
+  0% { transform: translate(300px, 226px); }
+  28%, 38% { transform: translate(180px, 163px); }
+  64%, 100% { transform: translate(330px, 226px); }
+}
+
+/* With reduced motion everything shows finished and holds still */
+.hw--still *,
+.hw--still {
+  animation: none !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hw-stage {
+    animation: none;
   }
 }
 
-@media (max-width: 1360px) {
-  .hero__loop {
+/* Small phones: drop the step list so the drawing stays readable */
+@media (max-width: 420px) {
+  .hw__body {
+    grid-template-columns: 1fr;
+  }
+
+  .hw__steps {
     display: none;
   }
 }
@@ -3901,17 +4297,29 @@ button {
     padding: 130px var(--gutter) 70px;
   }
 
-  .hero__loop {
-    display: none;
-  }
-
   .hero__content {
     padding-block-start: 24px;
   }
 
   .hero__portrait {
-    width: min(100%, 320px);
+    justify-self: center;
+    width: min(100%, 600px);
     margin-top: 10px;
+  }
+
+  /* Smaller sticker on phones so it doesn't run into the badge */
+  .hero__sticker {
+    top: -9%;
+    left: -2%;
+    padding: 6px 14px;
+    font-size: 16px;
+  }
+
+  .hero__badge {
+    right: -2%;
+    top: -10%;
+    width: 88px;
+    height: 88px;
   }
 }
 

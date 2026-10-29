@@ -428,7 +428,7 @@ export const caseStudies = {
       {
         icon: 'user',
         title: 'Role',
-        text: 'UX Research, Interaction Design, Game Design, User Testing, Stakeholder Collaboration, Data Analysis',
+        text: 'Research, interaction design, user testing, stakeholder communication, data analysis',
       },
       { icon: 'tools', title: 'Tools', text: 'Unity, C#' },
       {
@@ -813,7 +813,7 @@ export const caseStudies = {
       {
         icon: 'user',
         title: 'Role',
-        text: 'UX Research, UX/UI Design, Usability Testing, Product Design, Project Coordination, Data Analysis',
+        text: 'Designed most of the app in Figma, prepared and ran the usability tests, led the project planning',
       },
       { icon: 'tools', title: 'Tools', text: 'Figma, Unity, NFC' },
       {
@@ -1657,7 +1657,7 @@ export const caseStudies = {
       {
         icon: 'user',
         title: 'Role',
-        text: 'UX Research, Game UX, Interaction Design, Accessibility, User Testing, Stakeholder Management and communication',
+        text: 'UX lead: interface design in Figma, stakeholder communication, preparing and running the tests',
       },
       { icon: 'tools', title: 'Tools', text: 'Unity, C#' },
       {
@@ -3436,7 +3436,7 @@ export const caseStudies = {
       {
         icon: 'user',
         title: 'Role',
-        text: 'Digital Design Intern',
+        text: 'Designed branded client apps in Figma and built them into the live platform with CSS and LESS',
       },
       { icon: 'tools', title: 'Tools', text: 'Figma, CSS, LESS, HTML, Jira, CMS' },
       {
