@@ -4062,7 +4062,7 @@ button {
   stroke-linecap: round;
 }
 
-/* Arrows: between versions, and the responsive width arrow */
+/* Arrows between the versions in Iterate */
 .hw-connector {
   fill: none;
   stroke: rgb(var(--accent-rgb) / 0.55);
@@ -4105,14 +4105,27 @@ button {
     hw-blink 1.2s ease-in-out 0.7s infinite;
 }
 
-/* Design: the outline that draws around the heading on every screen */
-.hw-outline {
-  fill: none;
-  stroke: var(--accent);
-  stroke-width: 1.4;
+/* Design: the empty spot the card is dropped into, and the spacing measurements */
+.hw-slot {
+  fill: rgb(var(--accent-rgb) / 0.06);
+  stroke: rgb(var(--accent-rgb) / 0.5);
+  stroke-dasharray: 3 3;
 }
 
-/* Small pills on top of a line (Responsive, Round 3) */
+.hw-measure {
+  fill: none;
+  stroke: var(--accent);
+  stroke-width: 1.2;
+  stroke-linecap: round;
+}
+
+/* Design: the card dragged from the component library into the screen */
+.hw-drag {
+  filter: drop-shadow(0 6px 8px rgb(var(--umber-rgb) / 0.18));
+  animation: hw-drag var(--scene) ease-in-out both;
+}
+
+/* Small pill on top of a line (Round 3) */
 .hw-pill {
   stroke: rgb(var(--accent-rgb) / 0.35);
 }
@@ -4122,12 +4135,6 @@ button {
   font-family: var(--serif);
   font-style: italic;
   font-size: 10.5px;
-  fill: var(--header-name);
-}
-
-.hw-type {
-  font-family: var(--serif);
-  font-size: 26px;
   fill: var(--header-name);
 }
 
@@ -4151,6 +4158,10 @@ button {
 
 .hw-label--accent {
   fill: var(--accent);
+}
+
+.hw-label--xs {
+  font-size: 7px;
 }
 
 /* The cursor follows its own path in each step */
@@ -4223,10 +4234,16 @@ button {
   82%, 100% { transform: translate(318px, 226px); }
 }
 
+@keyframes hw-drag {
+  0%, 26% { transform: translate(-149px, -24px); }
+  52%, 100% { transform: none; }
+}
+
 @keyframes hw-cur-design {
-  0% { transform: translate(330px, 230px); }
-  50%, 60% { transform: translate(40px, 198px); }
-  84%, 100% { transform: translate(150px, 230px); }
+  0% { transform: translate(318px, 226px); }
+  20%, 26% { transform: translate(71px, 106px); }
+  52%, 58% { transform: translate(220px, 130px); }
+  84%, 100% { transform: translate(300px, 226px); }
 }
 
 @keyframes hw-cur-test {

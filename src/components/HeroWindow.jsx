@@ -8,7 +8,7 @@ const SCENE_MS = 5200;
 // `file` is the name in the window's title bar, `label` the step in the side list.
 const SCENES = [
   { id: 'research', label: 'Research', file: 'literature-review' },
-  { id: 'design', label: 'Design', file: 'hierarchy.fig' },
+  { id: 'design', label: 'Design', file: 'components.fig' },
   { id: 'test', label: 'Test', file: 'interviews-and-survey' },
   { id: 'iterate', label: 'Iterate', file: 'v3-build' },
 ];
@@ -123,134 +123,105 @@ function Research() {
   );
 }
 
-// One layout on a screen: picture, heading (H1), subheading (H2), body text and a button.
-// `s` is the screen's layout: where each part sits and how big it is.
-function Layout({ s, d }) {
+// A content card: picture on the left, title and two lines of text.
+function ContentCard({ x, y }) {
   return (
     <>
-      <rect className="hw-pop hw-c-blue" style={at(d)} {...s.image} rx={s.r} />
-      <rect className="hw-gx hw-c-ink" style={at(d + 0.08)} {...s.h1} rx={s.h1.height / 2.6} />
-      <rect className="hw-gx hw-c-muted" style={at(d + 0.15)} {...s.h2} rx={s.h2.height / 2} />
-      {s.body.map((line, i) => (
-        <rect key={i} className="hw-gx hw-c-line" style={at(d + 0.2 + i * 0.04)} {...line} rx={line.height / 2} />
-      ))}
-      <rect className="hw-pop hw-c-accent" style={at(d + 0.3)} {...s.button} rx={s.button.height / 2} />
+      <rect className="hw-phone" x={x} y={y} width="76" height="40" rx="6" />
+      <rect className="hw-c-blue" x={x + 6} y={y + 6} width="20" height="28" rx="3" />
+      <rect className="hw-c-ink" x={x + 32} y={y + 10} width="36" height="4" rx="2" />
+      <rect className="hw-c-line" x={x + 32} y={y + 18} width="28" height="3" rx="1.5" />
+      <rect className="hw-c-line" x={x + 32} y={y + 25} width="32" height="3" rx="1.5" />
     </>
   );
 }
 
-const SCREENS = {
-  desktop: {
-    r: 5,
-    image: { x: 130, y: 52, width: 42, height: 64 },
-    h1: { x: 28, y: 56, width: 90, height: 10 },
-    h2: { x: 28, y: 73, width: 62, height: 6 },
-    body: [
-      { x: 28, y: 87, width: 80, height: 4 },
-      { x: 28, y: 95, width: 72, height: 4 },
-      { x: 28, y: 103, width: 76, height: 4 },
-    ],
-    button: { x: 28, y: 117, width: 44, height: 12 },
-  },
-  tablet: {
-    r: 4,
-    image: { x: 206, y: 36, width: 72, height: 34 },
-    h1: { x: 206, y: 78, width: 58, height: 8 },
-    h2: { x: 206, y: 92, width: 42, height: 5 },
-    body: [
-      { x: 206, y: 103, width: 70, height: 4 },
-      { x: 206, y: 110, width: 62, height: 4 },
-      { x: 206, y: 117, width: 66, height: 4 },
-    ],
-    button: { x: 206, y: 130, width: 46, height: 11 },
-  },
-  phone: {
-    r: 3,
-    image: { x: 306, y: 58, width: 36, height: 22 },
-    h1: { x: 306, y: 86, width: 30, height: 6 },
-    h2: { x: 306, y: 96, width: 22, height: 4 },
-    body: [
-      { x: 306, y: 105, width: 34, height: 3 },
-      { x: 306, y: 111, width: 28, height: 3 },
-    ],
-    button: { x: 306, y: 124, width: 36, height: 9 },
-  },
-};
+// A spacing measurement: a short accent line with its value next to it.
+function Measure({ path, x, y, value, d }) {
+  return (
+    <g>
+      <path className="hw-draw hw-measure" style={at(d)} pathLength="1" d={path} />
+      <text className="hw-up hw-label hw-label--accent hw-label--xs" style={at(d + 0.1)} x={x} y={y}>
+        {value}
+      </text>
+    </g>
+  );
+}
 
-// 2. Design: the same page on desktop, tablet and phone, with a type scale that keeps the hierarchy.
+// 2. Design: a screen is put together from a component library, with spacing set by auto layout.
 function Design() {
   return (
     <>
-      {/* Desktop, tablet and phone */}
-      <g className="hw-up" style={at(0.2)}>
-        <rect className="hw-phone" x="16" y="34" width="168" height="116" rx="8" />
-        {[24, 30, 36].map((cx) => (
-          <circle key={cx} className="hw-c-line" cx={cx} cy="41" r="1.8" />
+      {/* Component library */}
+      <rect className="hw-up hw-phone" style={at(0)} x="16" y="16" width="110" height="208" rx="10" />
+      <text className="hw-up hw-label hw-label--muted" style={at(0.15)} x="28" y="33">
+        Components
+      </text>
+      <g className="hw-up" style={at(0.3)}>
+        <rect className="hw-c-cream" x="26" y="42" width="90" height="34" rx="6" />
+        <rect className="hw-c-accent" x="36" y="53" width="44" height="12" rx="6" />
+      </g>
+      <g className="hw-up" style={at(0.4)}>
+        <rect className="hw-c-cream" x="26" y="84" width="90" height="44" rx="6" />
+        <ContentCard x={33} y={86} />
+      </g>
+      <g className="hw-up" style={at(0.5)}>
+        <rect className="hw-c-cream" x="26" y="136" width="90" height="30" rx="6" />
+        <rect className="hw-c-sage" x="36" y="147" width="26" height="8" rx="4" />
+        <rect className="hw-c-peach" x="66" y="147" width="26" height="8" rx="4" />
+      </g>
+      <g className="hw-up" style={at(0.6)}>
+        <rect className="hw-c-cream" x="26" y="174" width="90" height="38" rx="6" />
+        {[42, 62, 82, 102].map((cx, i) => (
+          <circle key={cx} className={i === 0 ? 'hw-c-accent' : 'hw-c-line'} cx={cx} cy="193" r="5" />
         ))}
       </g>
-      <Layout s={SCREENS.desktop} d={0.4} />
-      <rect className="hw-up hw-phone" style={at(0.9)} x="196" y="24" width="92" height="132" rx="10" />
-      <Layout s={SCREENS.tablet} d={1.05} />
-      <rect className="hw-up hw-phone" style={at(1.5)} x="300" y="46" width="48" height="100" rx="9" />
-      <Layout s={SCREENS.phone} d={1.62} />
 
-      {[
-        [100, '1440 px', 0.5],
-        [242, '768 px', 1],
-        [324, '375 px', 1.6],
-      ].map(([x, label, d]) => (
-        <text key={label} className="hw-up hw-label hw-label--muted" style={at(d)} x={x} y="168" textAnchor="middle">
-          {label}
-        </text>
-      ))}
+      {/* The screen being built */}
+      <rect className="hw-up hw-phone" style={at(0.2)} x="170" y="16" width="100" height="208" rx="14" />
+      <Bar x={182} y={32} w={50} h={7} c="ink" d={0.45} />
+      <Bar x={182} y={44} w={34} h={4} c="muted" d={0.55} />
+      <rect className="hw-pop hw-c-blue" style={at(0.65)} x="182" y="56" width="76" height="46" rx="6" />
+      <rect className="hw-fade hw-slot" style={at(0.8)} x="182" y="110" width="76" height="40" rx="6" />
+      <rect className="hw-pop hw-c-sage" style={at(3.3)} x="182" y="158" width="26" height="8" rx="4" />
+      <rect className="hw-pop hw-c-peach" style={at(3.38)} x="212" y="158" width="26" height="8" rx="4" />
+      <rect className="hw-pop hw-c-accent" style={at(3.5)} x="182" y="190" width="76" height="18" rx="9" />
 
-      {/* Type scale */}
-      <rect className="hw-up hw-phone" style={at(2.1)} x="16" y="178" width="170" height="48" rx="10" />
+      {/* The card dragged from the library: drawn where it lands, the animation brings it from the library */}
+      <g className="hw-fade" style={at(0.45)}>
+        <g className="hw-drag">
+          <ContentCard x={182} y={110} />
+        </g>
+      </g>
+
+      {/* Spacing from auto layout */}
+      <Measure path="M250 103v6" x={254} y={109} value="8" d={2.95} />
+      <Measure path="M250 151v6" x={254} y={157} value="8" d={3.05} />
+      <Measure path="M171 130h10" x={172} y={126} value="12" d={3.15} />
+
+      {/* Auto layout settings */}
+      <rect className="hw-up hw-phone" style={at(0.3)} x="282" y="16" width="62" height="208" rx="10" />
+      <text className="hw-up hw-label hw-label--muted" style={at(0.45)} x="290" y="33">
+        Auto layout
+      </text>
       {[
-        [30, 24, 'H1', 2.3],
-        [82, 17, 'H2', 2.4],
-        [126, 12, 'Body', 2.5],
-      ].map(([x, size, label, d]) => (
+        ['Gap', '8', 0.6],
+        ['Padding', '12', 0.7],
+        ['Radius', '6', 0.8],
+      ].map(([label, value, d], i) => (
         <g key={label} className="hw-up" style={at(d)}>
-          <text className="hw-type" style={{ fontSize: size }} x={x} y="205">
-            Aa
-          </text>
-          <text className="hw-label hw-label--muted" x={x} y="218">
+          <text className="hw-label hw-label--muted" x="290" y={56 + i * 30}>
             {label}
+          </text>
+          <rect className="hw-c-cream" x="290" y={61 + i * 30} width="46" height="14" rx="4" />
+          <text className="hw-label" x="296" y={71 + i * 30}>
+            {value}
           </text>
         </g>
       ))}
 
-      {/* Responsive: one design, every width */}
-      <path className="hw-draw hw-connector hw-connector--strong" style={at(2.6)} pathLength="1" d="M204 202h136M204 202l5-4m-5 4 5 4M340 202l-5-4m5 4-5 4" />
-      <g className="hw-pop" style={at(2.8)}>
-        <rect className="hw-c-white hw-pill" x="241" y="193" width="62" height="18" rx="9" />
-        <text className="hw-label hw-label--accent" x="272" y="205" textAnchor="middle">
-          Responsive
-        </text>
-      </g>
-
-      {/* Clicking H1 outlines the heading on every screen */}
-      {[
-        [25, 53, 96, 16],
-        [203, 75, 64, 14],
-        [303, 83, 36, 12],
-      ].map(([x, y, w, h], i) => (
-        <rect
-          key={x}
-          className="hw-draw hw-outline"
-          style={at(3.2 + i * 0.1)}
-          pathLength="1"
-          x={x}
-          y={y}
-          width={w}
-          height={h}
-          rx="3"
-        />
-      ))}
-
-      <Click x={40} y={198} d={2.95} />
-      <Cursor scene="design" end="150,230" />
+      <Click x={220} y={130} d={2.75} />
+      <Cursor scene="design" end="300,226" />
     </>
   );
 }
