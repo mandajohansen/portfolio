@@ -7,8 +7,6 @@ const HERO = {
   // Add more words to the list to have them typed out one after the other.
   typedPrefix: 'I’m a',
   typed: ['UX/UI and product designer'],
-  // Set to null to hide the green "available" pill.
-  status: 'Open to new opportunities',
   // Sentence 1 (title): what you do. Sentence 2 (lead): the experience that backs it up.
   title: [
     'I take digital products',
@@ -130,12 +128,6 @@ export default function Hero() {
             {HERO.typedPrefix} <span className="hero__typed-word">{typed}</span>
             <span className="hero__caret" aria-hidden="true" />
           </p>
-          {HERO.status && (
-            <span className="hero__status">
-              <span className="hero__status-dot" aria-hidden="true" />
-              {HERO.status}
-            </span>
-          )}
         </div>
 
         <h1 className="hero__title">

@@ -56,9 +56,6 @@
   --sage-light-rgb: 196 202 160;
   /* Results / Education band */
   --sage-bright-rgb: 205 210 175;
-  --status-green: #8c9a45;
-  /* "open to opportunities" dot */
-  --status-green-rgb: 140 154 69;
   --chosen: #666f2e;
   /* "Chosen design" badge */
 
@@ -3658,29 +3655,6 @@ button {
   animation: caret-blink 1s steps(1) infinite;
 }
 
-.hero__status {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 6px 14px;
-  border: 1px solid rgb(var(--black-rgb) / 0.08);
-  border-radius: 999px;
-  background: rgb(var(--white-rgb) / 0.7);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  font-size: 14px;
-  color: var(--ink);
-}
-
-.hero__status-dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: var(--status-green);
-  box-shadow: 0 0 0 0 rgb(var(--status-green-rgb) / 0.7);
-  /*animation: hero-pulse 2.2s ease-out infinite;*/
-}
-
 /* Headline: the lines flow as one sentence and fade in one by one */
 .hero__title {
   position: relative;
@@ -3906,15 +3880,6 @@ button {
   }
 }
 
-@keyframes hero-pulse {
-  70% {
-    box-shadow: 0 0 0 8px rgb(var(--status-green-rgb) / 0);
-  }
-
-  100% {
-    box-shadow: 0 0 0 0 rgb(var(--status-green-rgb) / 0);
-  }
-}
 
 @keyframes caret-blink {
   50% {
@@ -3959,7 +3924,6 @@ button {
   .hero__proof,
   .hero__actions,
   .hero__portrait,
-  .hero__status-dot,
   .hero__caret,
   .hero__badge-ring {
     animation: none;
